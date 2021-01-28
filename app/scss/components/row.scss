@@ -1,7 +1,12 @@
 .row {
   display: flex;
 
+  &--jc-sb {
+    justify-content: space-between;
+  }
+
   &--sb-center {
+    position: relative;
     justify-content: space-between;
     align-items: center;
   }
@@ -23,5 +28,9 @@
     @media (max-width: 1150px){
       display: none;
     }
+  }
+  &--wdth-170 {
+    width: 170px;
+    height: 100px;
   }
 }
