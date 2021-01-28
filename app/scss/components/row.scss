@@ -1,0 +1,27 @@
+.row {
+  display: flex;
+
+  &--sb-center {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &--mx-w--350 {
+    max-width: 350px;
+    width: 100%;
+    @media (max-width: 1390px) {
+      max-width: 307px;
+    }
+  }
+  &--hg--80 {
+    height: 80px;
+    @media (max-width: 1390px) {
+      height: 40px;
+    }
+  }
+  &--none {
+    @media (max-width: 1150px){
+      display: none;
+    }
+  }
+}

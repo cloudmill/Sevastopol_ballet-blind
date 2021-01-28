@@ -1,4 +1,4 @@
-@mixin screen($width, $type: max) {
+ @mixin screen($width, $type: max) {
   @if map_has_key($breakpoints, $width) {
     $width: map_get($breakpoints, $width);
 

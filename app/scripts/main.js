@@ -9,4 +9,4 @@ export default class App {
   }
 };
 
-export default App;
+// export default App;
