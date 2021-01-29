@@ -1,6 +1,6 @@
 .text {
 
-  &--iter-defolt {
+  &--inter-defolt {
     font-family: $font-main;
     font-size: 16px;
     line-height: 180%;
@@ -44,6 +44,6 @@
   }
 
   &--lilac {
-    color: #354F9A;
+    color: $lilac;
   }
 }

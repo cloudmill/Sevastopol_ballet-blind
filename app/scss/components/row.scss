@@ -5,6 +5,14 @@
     justify-content: space-between;
   }
 
+  &--fd-rr {
+    flex-direction: row-reverse;
+  }
+
+  &--aln-i {
+    align-items: flex-end;
+  }
+
   &--sb-center {
     position: relative;
     justify-content: space-between;

@@ -1,0 +1,32 @@
+.link {
+  color: white;
+  position: relative;
+  font-size: 18px;
+  line-height: 100%;
+  transition: all $ease-main;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: white;
+    transition: all $ease-main;
+  }
+
+  &:hover {
+    &::before {
+      width: 100%;
+      border-bottom: 1px solid white;
+    }
+  }
+
+  &--mr-r--60 {
+    margin-right: 60px;
+    @media (max-width: 1390px) {
+      margin-right: 20px;
+    }
+  }
+}

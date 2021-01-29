@@ -28,7 +28,7 @@ block content
             br
             | новом уровне.
         .col
-          p.text.text--iter-defolt Театр является частью одного из четырех
+          p.text.text--inter-defolt Театр является частью одного из четырех
             br
             | федеральных культурно–образовательных
             br
@@ -64,7 +64,7 @@ block content
               .slider-button-next.index__next
           .index__slider-culture
             img(src="/images/culture.svg", alt="")
-            p.text.text--iter-defolt Направление обозначено Президентом как один из приоритетов 
+            p.text.text--inter-defolt Направление обозначено Президентом как один из приоритетов 
               span.text--lilac национального проекта «Культура».
   .index__video
     .content 
@@ -87,7 +87,7 @@ block content
               p.title.title--regsl30-20 Дорогие друзья!
                 br
                 | Мы приветствуем Вас на сайте Севастопольского Театра оперы и балета.
-              p.text.text--iter-defolt.text--lilac Искренне надеюсь, что размещенная здесь информация будет интересна ценителям нашего творчества. В то же время убежден, что виртуальный мир никогда не заменит живого обмена эмоциями. Поэтому буду рад видеть Вас на наших спектаклях.
+              p.text.text--inter-defolt.text--lilac Искренне надеюсь, что размещенная здесь информация будет интересна ценителям нашего творчества. В то же время убежден, что виртуальный мир никогда не заменит живого обмена эмоциями. Поэтому буду рад видеть Вас на наших спектаклях.
             .index__greeting-quotes
               img(src="/images/quotes.svg", alt="")
             .index__greeting-quotes.index__greeting-quotes-rot
@@ -95,4 +95,185 @@ block content
             .slider-button-conteiner.slider-button-conteiner--absolute
               .slider-button-prev
               .slider-button-next
+  .index__opening
+    .content
+      .row
+        .col--mw-720
+          .title.title--regal40-20 Открытие учреждения
+            br
+            | запланировано
+            span.title.title--regal40-20.title--lilac на 2023 год.
+              sup 
+                img(src="/images/question.svg", alt="")
+            br
+            | Его большая сцена будет рассчита на на 1100 мест, малая — на 200. Расположится театр на мысе Хрустальном.
+        .row.row--aln-i
+          .col--mrg-r
+            .title.title--nomber 1100
+            .text.text--inter-defolt мест большой сцены
+          .col
+            .title.title--nomber 200
+            .text.text--inter-defolt мест малой сцены
+  .index__instit
+    .content
+      .row.row--jc-sb
+        .col
+          .col-mw-345
+            .text.text--inter-defolt Севастопольский государственный театр оперы и балета учрежден распоряжением Правительства Российской Федерации во исполнение Указа Президента Российской Федерации от 7 мая 2018 г. № 204
+              span.text.text--regal18-14-ital  «О национальных целях и стратегических задачах развития Российской Федерации на период до 2024 года»
 
+          .row.row--sb-center
+            .index__instit-pagination
+            .slider-button-conteiner
+                .slider-button-prev.instit__prev
+                .slider-button-next.instit__next
+        .col
+          .index__instit-slider
+            .swiper-wrapper
+              .swiper-slide.index__instit-slide
+                img(src="/images/instit-slide.png", alt="")
+              .swiper-slide.index__instit-slide
+                img(src="/images/instit-slide.png", alt="")
+              .swiper-slide.index__instit-slide
+                img(src="/images/instit-slide.png", alt="")
+  .index__event
+    .content
+      .title.title--section Ближайшие
+        br
+        | мероприятия
+      .index__event-conteiner
+        .index__event-announce
+          .row.date
+            .col
+              .title.title--date 05.12.
+              .text.text--inter-defolt Вторник
+            .title.title--inter30-18 20:00
+          .col--inf
+            .title.title--regal40-20 Звёзды мирового балета
+            .text.text--regal18-14-ital Нина Тимофеева, Наталья Рыженко
+            .text.text--inter-defolt Сцена ДК им. Ленсовета 
+          +lilac-btn-180('Подробнее')
+        .index__event-announce
+          .row.date
+            .col
+              .title.title--date 05.12.
+              .text.text--inter-defolt Вторник
+            .title.title--inter30-18 20:00
+          .col--inf
+            .title.title--regal40-20 Звёзды мирового балета
+            .text.text--regal18-14-ital Нина Тимофеева, Наталья Рыженко
+            .text.text--inter-defolt Сцена ДК им. Ленсовета 
+          +lilac-btn-180('Подробнее')
+        .index__event-announce
+          .row.date
+            .col
+              .title.title--date 05.12.
+              .text.text--inter-defolt Вторник
+            .title.title--inter30-18 20:00
+          .col--inf
+            .title.title--regal40-20 Звёзды мирового балета
+            .text.text--regal18-14-ital Нина Тимофеева, Наталья Рыженко
+            .text.text--inter-defolt Сцена ДК им. Ленсовета 
+          +lilac-btn-180('Подробнее')
+  .index__gallery
+    .content
+      .row
+        .title.title--section Галерея
+        .slider-button-conteiner
+          .slider-button-prev.gallery-prev
+          .slider-button-next.gallery-next
+    .index__gallery-conteiner
+      .swiper-wrapper
+        .swiper-slide.index__gallery-slide
+          .row
+            .col
+              img(src="/images/gallery-slide.png", alt="")
+              .prev
+                .title.title--inter30-16 05.12.
+                .title.title--regal40-20 Осуждение Фауста
+            .col.prev-n
+              .title.title--inter30-16 05.12.
+              .title.title--regal40-20 Осуждение
+                br
+                | Фауста
+        .swiper-slide.index__gallery-slide
+          .row
+            .col
+              img(src="/images/gallery-slide.png", alt="")
+              .prev
+                .title.title--inter30-16 05.12.
+                .title.title--regal40-20 Осуждение Фауста
+            .col.prev-n
+              .title.title--inter30-16 05.12.
+              .title.title--regal40-20 Осуждение
+                br
+                | Фауста
+        .swiper-slide.index__gallery-slide
+          .row
+            .col
+              img(src="/images/gallery-slide.png", alt="")
+              .prev
+                .title.title--inter30-16 05.12.
+                .title.title--regal40-20 Осуждение Фауста
+            .col.prev-n
+              .title.title--inter30-16 05.12.
+              .title.title--regal40-20 Осуждение
+                br
+                | Фауста
+  .index__note
+    .content
+      .index__note-conteiner
+        .index__note-date 25 авг 2020
+        .row.row--sb-center
+          .title.title--regal40-20 Севастопольский театр оперы и балета запускает новую программу.
+          .text.text--inter-defolt Открытие учреждения запланировано на 2023 год. Его большая сцена будет рассчитана на 1100 мест, малая — на 200. Расположится театр на мысе Хрустальном.
+  .index__media
+    .content
+      .row
+        .title.title--section СМИ о театре
+        .slider-button-conteiner
+          .slider-button-prev.media-next
+          .slider-button-next.media-prev
+      .index__media-conteiner
+        .swiper-wrapper
+          .swiper-slide.index__media-item
+            .index__media-date 25 авг 2020
+            a(href="#").title.title--regsl30-20 Севастопольский театр оперы и балета запускает новую программу
+            .text.text--inter-defolt Открытие учреждения запланировано на 2023 год. Его большая сцена будет рассчитана на 1100 мест, малая – на 200. Расположится театр на мысе Хрустальном.
+            a(href="#").text--inter-defolt.text--lilac Комсомольская Правда
+            a(href="").text--inter-defolt.index__media-link Источник
+          .swiper-slide.index__media-item
+            .index__media-date 25 авг 2020
+            a(href="#").title.title--regsl30-20 Севастопольский театр оперы и балета запускает новую программу
+            .text.text--inter-defolt Открытие учреждения запланировано на 2023 год. Его большая сцена будет рассчитана на 1100 мест, малая – на 200. Расположится театр на мысе Хрустальном.
+            a(href="#").text--inter-defolt.text--lilac Комсомольская Правда
+            a(href="").text--inter-defolt.index__media-link Источник
+          .swiper-slide.index__media-item
+            .index__media-date 25 авг 2020
+            a(href="#").title.title--regsl30-20 Севастопольский театр оперы и балета запускает новую программу
+            .text.text--inter-defolt Открытие учреждения запланировано на 2023 год. Его большая сцена будет рассчитана на 1100 мест, малая – на 200. Расположится театр на мысе Хрустальном.
+            a(href="#").text--inter-defolt.text--lilac Комсомольская Правда
+            a(href="").text--inter-defolt.index__media-link Источник
+          .swiper-slide.index__media-item
+            .index__media-date 25 авг 2020
+            a(href="#").title.title--regsl30-20 Севастопольский театр оперы и балета запускает новую программу
+            .text.text--inter-defolt Открытие учреждения запланировано на 2023 год. Его большая сцена будет рассчитана на 1100 мест, малая – на 200. Расположится театр на мысе Хрустальном.
+            a(href="#").text--inter-defolt.text--lilac Комсомольская Правда
+            a(href="").text--inter-defolt.index__media-link Источник
+          .swiper-slide.index__media-item
+            .index__media-date 25 авг 2020
+            a(href="#").title.title--regsl30-20 Севастопольский театр оперы и балета запускает новую программу
+            .text.text--inter-defolt Открытие учреждения запланировано на 2023 год. Его большая сцена будет рассчитана на 1100 мест, малая – на 200. Расположится театр на мысе Хрустальном.
+            a(href="#").text--inter-defolt.text--lilac Комсомольская Правда
+            a(href="").text--inter-defolt.index__media-link Источник
+          .swiper-slide.index__media-item
+            .index__media-date 25 авг 2020
+            a(href="#").title.title--regsl30-20 Севастопольский театр оперы и балета запускает новую программу
+            .text.text--inter-defolt Открытие учреждения запланировано на 2023 год. Его большая сцена будет рассчитана на 1100 мест, малая – на 200. Расположится театр на мысе Хрустальном.
+            a(href="#").text--inter-defolt.text--lilac Комсомольская Правда
+            a(href="").text--inter-defolt.index__media-link Источник
+
+
+      
+
+        

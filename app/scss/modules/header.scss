@@ -4,10 +4,10 @@
     max-height: 160px;
     height: 100%;
     background-color: transparent;
-    color: white;
     padding: 40px 0;
     width: 100%;
     z-index: 5;
+    transition: all $ease-main;
     @media (max-width: 768px){
       padding: 20px 0;
       max-height: 40px;
@@ -101,38 +101,6 @@
     display: inline-flex;
     @media (max-width: 1150px){
       display: none;
-    }
-  }
-
-  &__link {
-    position: relative;
-    font-size: 18px;
-    line-height: 100%;
-    transition: all $ease-main;
-
-    &::before {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 0;
-      height: 1px;
-      background-color: white;
-      transition: all $ease-main;
-    }
-
-    &:hover {
-      &::before {
-        width: 100%;
-        border-bottom: 1px solid white;
-      }
-    }
-
-    &--mr-r--60 {
-      margin-right: 60px;
-      @media (max-width: 1390px) {
-        margin-right: 20px;
-      }
     }
   }
 

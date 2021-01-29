@@ -5,4 +5,47 @@
     font-size: 30px;
     line-height: 130%;
   }
+
+  &--regal40-20 {
+    font-family: $font-second;
+    font-size: 40px;
+    line-height: 130%;
+  }
+
+  &--nomber {
+    font-family: $font-second;
+    font-size: 150px;
+    line-height: 130%;
+    color: $lilac;
+  }
+
+  &--lilac {
+    color: $lilac;
+  }
+
+  &--section {
+    font-family: $font-second;
+    font-size: 90px;
+    line-height: 1;
+    width: 100%;
+    text-align: center;
+  }
+
+  &--date {
+    font-family: $font-main;
+    font-size: 90px;
+    line-height: 100%;
+  }
+
+  &--inter30-18 {
+    font-family: $font-main;
+    font-size: 30px;
+    line-height: 160%;
+  }
+
+  &--inter30-16 {
+    font-family: $font-main;
+    font-size: 30px;
+    line-height: 110%;
+  }
 }
