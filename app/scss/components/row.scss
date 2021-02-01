@@ -9,7 +9,12 @@
     flex-direction: row-reverse;
   }
 
+  &--fd-c {
+    flex-direction: column;
+  }
+
   &--aln-i {
+    display: flex;
     align-items: flex-end;
   }
 

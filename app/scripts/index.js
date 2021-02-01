@@ -10,7 +10,8 @@ $(document).ready(function() {
   institSlider();
   gallery();
   mediaSlider();
-  headerScroll();
+  performSlider();
+  // headerScroll();
 });
 
 function burger() {
@@ -100,8 +101,16 @@ function gallery() {
   var gallerySlide = new Swiper('.index__gallery-conteiner', {
     // effect: 'coverflow',
     grabCursor: true,
-    centeredSlides: true,
+    centeredSlides: false,
     slidesPerView: 'auto',
+
+    breakpoints: {
+
+      990: {
+        centeredSlides: true,
+      }
+
+    },
     // coverflowEffect: {
     //   rotate: 0,
     //   stretch: 0,
@@ -123,6 +132,21 @@ function mediaSlider() {
     navigation: {
       nextEl: '.media-prev',
       prevEl: '.media-next',
+    },
+  });
+}
+
+function performSlider() {
+  var performSlide = new Swiper('.perfom__picture-slider-conteiner', {
+    slidesPerView: 'auto',
+    centerSlides: true,
+    pagination: {
+      el: '.perfom__picture-pagination',
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: '.perform__next',
+      prevEl: '.perform__prev',
     },
   });
 }

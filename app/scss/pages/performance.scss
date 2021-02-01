@@ -1,0 +1,135 @@
+.perfom {
+
+  &__inform {
+    padding-top: 265px;
+
+    .row--jc-sb {
+      margin-bottom: 80px;
+    }
+    .col--mw-1080 {
+      max-width: 1080px;
+      .text {
+        margin-bottom: 20px;
+      }
+    }
+
+    &-data-contein {
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      padding: 0 140px 20px 40px;
+      border-radius: 10px;
+      margin-bottom: 40px;
+  
+      .text--inter-defolt {
+        margin-top: -25px;
+      }
+    }
+  
+    .col--mr {
+      margin: 20px 0;
+    }
+  }
+
+  &__picture {
+    margin-top: 20px;
+
+    &-slider-conteiner {
+      max-width: 1155px;
+      overflow: hidden;
+      .swiper-slide {
+        border-radius: 10px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .col--345 {
+      width: 100%;
+      max-width: 345px;
+    }
+  }
+
+  &__role {
+    margin-top: 160px;
+
+    &-conteiner {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 80px 0 20px 80px;
+      background-color: white;
+      border-radius: 10px;
+    }
+
+    &-item {
+      width: calc(100% / 4);
+      padding-bottom: 60px;
+    }
+
+    &-title {
+      font-family: $font-second;
+      font-size: 24px;
+      line-height: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__composition {
+    margin-top: 160px;
+
+    &-conteiner {
+      margin-top: 80px;
+      display: flex;
+      flex-wrap: wrap;
+
+      & .perfom__composition-item:nth-of-type(4n) {
+        margin-right: 0;
+      }
+    }
+    
+    &-item {
+      width: calc((100% - 180px) /4);
+      padding-bottom: 80px;
+      margin-right: 60px;
+
+      
+      img {
+        max-width: 345px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__where {
+    margin-top: 160px;
+
+    &-conteiner {
+      margin-top: 80px;
+      padding: 0 80px;
+      background-color: white;
+      border-radius: 10px;
+      & .perfom__where-item:nth-of-type(even) {
+        border-bottom: 1px solid #D1DFF1;
+        border-top: 1px solid #D1DFF1;
+      }
+    }
+
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 60px 0;
+    }
+    .col--mw540 {
+      max-width: 540px;
+    }
+    .col--mw340 {
+      max-width: 340px;
+    }
+    .lilac-btn {
+      width: 212px;
+    }
+
+  }
+}
