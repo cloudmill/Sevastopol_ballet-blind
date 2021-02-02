@@ -4,7 +4,7 @@
     position: relative;
     height: 900px;
     padding: 190px 60px 50px;
-    background-image: url('/images/start-fon.png');
+    background-image: url('../images/start-fon.png');
     background-position: center;
     @media (max-width:1280px) {
       height: 800px;
@@ -207,7 +207,7 @@
     &-wrap{
       position: relative;
       border-radius: 10px;
-      background-image: url('/images/index-video.png');
+      background-image: url('../images/index-video.png');
       color: white;
     }
 
