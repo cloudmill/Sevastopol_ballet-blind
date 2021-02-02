@@ -33,9 +33,9 @@
   }
   &--hg--80 {
     height: 80px;
-    @media (max-width: 1390px) {
-      height: 40px;
-    }
+    // @media (max-width: 1390px) {
+    //   height: 40px;
+    // }
   }
   &--none {
     @media (max-width: 1150px){

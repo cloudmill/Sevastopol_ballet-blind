@@ -127,12 +127,30 @@
     font-size: 90px;
     line-height: 100%;
     color: #DED8BF;
+    @media (max-width: 1360px) {
+      font-size: 70px;
+    }
+    @media (max-width: 1024px) {
+      font-size: 50px;
+    }
+    @media (max-width: 768px) {
+      font-size: 30px;
+    }
   }
 
   &--page {
     font-family: $font-second;
     font-size: 90px;
     line-height: 100%;
+    @media (max-width: 1360px) {
+      font-size: 70px;
+    }
+    @media (max-width: 1024px) {
+      font-size: 50px;
+    }
+    @media (max-width: 768px) {
+      font-size: 30px;
+    }
   }
 
 }

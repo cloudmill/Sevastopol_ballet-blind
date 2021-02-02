@@ -59,9 +59,7 @@ block content
         .col.end
           .row.row--sb-center
             .index__slider-pagination
-            .slider-button-conteiner
-              .slider-button-prev.index__prev
-              .slider-button-next.index__next
+            +slider-btn('index__prev', 'index__next')
           .index__slider-culture
             img(src="./images/culture.svg", alt="")
             p.text.text--inter-defolt Направление обозначено Президентом как один из приоритетов 
@@ -92,9 +90,7 @@ block content
               img(src="./images/quotes.svg", alt="")
             .index__greeting-quotes.index__greeting-quotes-rot
               img(src="./images/quotes.svg", alt="")
-            .slider-button-conteiner.slider-button-conteiner--absolute
-              .slider-button-prev
-              .slider-button-next
+            +slider-btn('greeting__prev', 'greeting__next','slider-button-conteiner--absolute')
   .index__opening
     .content
       .row
@@ -124,9 +120,7 @@ block content
 
           .row.row--sb-center
             .index__instit-pagination
-            .slider-button-conteiner
-                .slider-button-prev.instit__prev
-                .slider-button-next.instit__next
+            +slider-btn('instit__prev', 'instit__next')
         .col
           .index__instit-slider
             .swiper-wrapper
@@ -182,9 +176,7 @@ block content
     .content
       .row
         .title.title--section Галерея
-        .slider-button-conteiner
-          .slider-button-prev.gallery-prev
-          .slider-button-next.gallery-next
+        +slider-btn('gallery-prev', 'gallery-next')
     .index__gallery-conteiner
       .swiper-wrapper
         .swiper-slide.index__gallery-slide
@@ -234,9 +226,7 @@ block content
     .content
       .row
         .title.title--section СМИ о театре
-        .slider-button-conteiner
-          .slider-button-prev.media-next
-          .slider-button-next.media-prev
+        +slider-btn('media-next', 'media-prev')
       .index__media-conteiner
         .swiper-wrapper
           .swiper-slide.index__media-item

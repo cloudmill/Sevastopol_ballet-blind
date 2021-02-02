@@ -6,44 +6,88 @@
   background-color: white;
   box-shadow: 0px 4px 20px rgba(228, 224, 206, 0.6);
   transition: all $ease-main;
-
-  &::before {
-    content: '';
-    width: 31px;
-    height: 27px;
+  @media (max-width: 1100px){
+    width: 40px;
+    height: 40px;
+  }
+  svg{
+    width: 30px;
+    height: 26px;
     position: absolute;
     right: 50%;
     top: 50%;
     transform: translate(50%, -50%);
-    background-repeat: no-repeat;
-    background-image: url("data:image/svg+xml,%3Csvg width='31' height='27' viewBox='0 0 31 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.271973 12.3961L0.271973 14.7233H25.352L16.4547 26.7472H19.1665C20.0778 26.7472 20.9375 26.313 21.4934 25.5719L22.2359 24.5823L22.3124 24.6146L30.5052 13.5607L30.5049 13.5604L30.5052 13.5599L22.3124 2.5061L22.2359 2.53842L21.4934 1.54879C20.9375 0.807722 20.0778 0.373535 19.1665 0.373535L16.4547 0.373535L25.3511 12.3961H0.271973Z' fill='%2321262C'/%3E%3C/svg%3E%0A");
+    transition: all $ease-main;
+    @media (max-width: 1100px){
+      width: 16px;
+      height: 14px;
+    }
+
+    path {
+      transition: all $ease-main;
+    }
   }
+  
+
+  // &::before {
+  //   content: '';
+  //   width: 31px;
+  //   height: 27px;
+  //   position: absolute;
+  //   right: 50%;
+  //   top: 50%;
+  //   transform: translate(50%, -50%);
+  //   background-repeat: no-repeat;
+  //   transition: all $ease-main;
+  //   background-image: url("data:image/svg+xml,%3Csvg width='31' height='27' viewBox='0 0 31 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.271973 12.3961L0.271973 14.7233H25.352L16.4547 26.7472H19.1665C20.0778 26.7472 20.9375 26.313 21.4934 25.5719L22.2359 24.5823L22.3124 24.6146L30.5052 13.5607L30.5049 13.5604L30.5052 13.5599L22.3124 2.5061L22.2359 2.53842L21.4934 1.54879C20.9375 0.807722 20.0778 0.373535 19.1665 0.373535L16.4547 0.373535L25.3511 12.3961H0.271973Z' fill='%2321262C'/%3E%3C/svg%3E%0A");
+  // }
 
   &:hover {
     width: 90px;
     height: 90px;
     background: #354F9A;
     box-shadow: 0px 4px 20px rgba(53, 79, 154, 0.4);
-
-    &::before {
-      width: 34px;
-      height: 29px;
-      background-image: url("data:image/svg+xml,%3Csvg width='35' height='31' viewBox='0 0 35 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.305969 14.1955L0.305969 16.8136H28.521L18.5115 30.3405H21.5624C22.5876 30.3405 23.5547 29.852 24.1801 29.0183L25.0153 27.905L25.1014 27.9413L34.3183 15.5058L34.318 15.5053L34.3183 15.5048L25.1014 3.06931L25.0153 3.10566L24.1801 1.99233C23.5547 1.15863 22.5876 0.670166 21.5624 0.670166L18.5115 0.670166L28.52 14.1955H0.305969Z' fill='white'/%3E%3C/svg%3E");
+    @media (max-width: 1100px){
+      width: 45px;
+      height: 45px;
     }
+
+    svg {
+      width: 34px;
+      height: 30px;
+      @media (max-width: 1100px){
+        width: 18px;
+        height: 16px;
+      }
+    }
+
+    path {
+      fill: white;
+    }
+
+    // &::before {
+    //   width: 34px;
+    //   height: 29px;
+    //   background-image: url("data:image/svg+xml,%3Csvg width='35' height='31' viewBox='0 0 35 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.305969 14.1955L0.305969 16.8136H28.521L18.5115 30.3405H21.5624C22.5876 30.3405 23.5547 29.852 24.1801 29.0183L25.0153 27.905L25.1014 27.9413L34.3183 15.5058L34.318 15.5053L34.3183 15.5048L25.1014 3.06931L25.0153 3.10566L24.1801 1.99233C23.5547 1.15863 22.5876 0.670166 21.5624 0.670166L18.5115 0.670166L28.52 14.1955H0.305969Z' fill='white'/%3E%3C/svg%3E");
+    // }
   }
 }
-.slider-button-prev {
-  transform: rotate(180deg);
-}
+// .slider-button-next {
+//   transform: rotate(180deg);
+// }
 
 .slider-button {
 
   &-conteiner {
     display: flex;
     justify-content: space-between;
-    width: 170px;
+    align-items: center;
+    width: 190px;
     height: 110px;
     flex-shrink: 0;
+    @media (max-width: 1100px){
+      width: 100px;
+    }
 
     &--absolute {
       position: absolute;

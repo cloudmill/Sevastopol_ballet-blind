@@ -11,7 +11,7 @@ $(document).ready(function() {
   gallery();
   mediaSlider();
   performSlider();
-  // headerScroll();
+  headerScroll();
 });
 
 function burger() {
@@ -41,24 +41,19 @@ function headerScroll() {
     let winScroll = $(this).scrollTop();
     total = winScroll - prevScroll;
     prevScroll = winScroll;
-    console.log(total);
-    if ( total > 0){
-      let i = 0;
-      while (i < 400){
-        header.css({
-          'transform': 'translateY(' + -i / 4 + '%)'
-        });
-        i = i + total;
-      }
+    
+    if ($(this).scrollTop() == 0){
+      header.removeClass('header-white--active');
+      header.removeClass('header-white--top');
     }else{
-      let i = 0;
-      while (i < -400){
-        header.css({
-          'transform': 'translateY(' + (i / 4) * -1 + '%)'
-        });
-        i = i - total;
+      if ((total < 0) && ($(this).scrollTop() !== 0)){
+        header.addClass('header-white--active');
+      }else{
+        header.addClass('header-white--top');
+        header.removeClass('header-white--active');
       }
     }
+    
 
   });
 }
