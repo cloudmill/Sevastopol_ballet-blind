@@ -1,4 +1,23 @@
 .header{
+  position: fixed;
+  max-height: 160px;
+  height: 100%;
+  background-color: transparent;
+  padding: 40px 0;
+  width: 100%;
+  z-index: 5;
+  transition: all $ease-main;
+  right: 0;
+  left: 0;
+
+
+
+
+
+
+
+
+
   &-white{
     position: fixed;
     max-height: 160px;
@@ -10,99 +29,9 @@
     transition: all $ease-main;
     right: 0;
     left: 0;
-    &--top {
-      transform: translateY(-100%);
-    }
-    &--active {
-      background: #354F9A;
-      transform: translateY(0);
-    }
     @media (max-width: 1150px){
       padding: 20px 0;
       max-height: 70px;
-    }
-
-    .burger-btn {
-      display: none;
-      position: relative;
-      height: 16px;
-      width: 24px;
-      cursor: pointer;
-      transition: all $ease-main;
-      z-index: 10px;
-      @media (max-width: 1150px){
-        display: block;
-      }
-      span {
-        position: absolute;
-        height: 2px;
-        right: 0;
-        left: 0;
-        background-color: white;
-        transition: all $ease-main;
-      }
-      
-      & :nth-of-type(2){
-        top: 7px;
-      }
-      & :nth-of-type(3){
-        bottom: 0;
-      }
-      & :nth-of-type(1){
-        top: 0;
-      }
-
-      &--active {
-        & :nth-of-type(2){
-          opacity: 0;
-        }
-        & :nth-of-type(3){
-          bottom: 7px;
-          transform: rotate(45deg);
-        }
-        & :nth-of-type(1){
-          top: 7px;
-          transform: rotate(-45deg);
-        }
-      }
-    }
-
-    .burger-menu {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 95vw;
-      height: 100vh;
-      margin-left: -100vw;
-      background: #354F9A;
-      transition: all $ease-main;
-      z-index: 10;
-  
-      &--active {
-        margin-left: 0;
-      }
-  
-      .menu-col {
-        margin-top: 120px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .header__link {
-        margin-bottom: 25px;
-      }
-
-      .header__item {
-        display: inline-flex;
-        margin-top: 15px;
-        .header__link {
-          margin-bottom: 0;
-        }
-      }
-  
     }
   }
 
@@ -143,4 +72,102 @@
       width: 144px;
     }
   }
+}
+
+.header--top {
+  transform: translateY(-100%);
+}
+.header--active {
+  background: #354F9A;
+  transform: translateY(0);
+  color: white;
+}
+.white {
+  display: none;
+}
+.black {
+  
+}
+
+.burger-btn {
+  display: none;
+  position: relative;
+  height: 16px;
+  width: 24px;
+  cursor: pointer;
+  transition: all $ease-main;
+  z-index: 10px;
+  @media (max-width: 1150px){
+    display: block;
+  }
+  span {
+    position: absolute;
+    height: 2px;
+    right: 0;
+    left: 0;
+    background-color: white;
+    transition: all $ease-main;
+  }
+  
+  & :nth-of-type(2){
+    top: 7px;
+  }
+  & :nth-of-type(3){
+    bottom: 0;
+  }
+  & :nth-of-type(1){
+    top: 0;
+  }
+
+  &--active {
+    & :nth-of-type(2){
+      opacity: 0;
+    }
+    & :nth-of-type(3){
+      bottom: 7px;
+      transform: rotate(45deg);
+    }
+    & :nth-of-type(1){
+      top: 7px;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.burger-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95vw;
+  height: 100vh;
+  margin-left: -100vw;
+  background: #354F9A;
+  transition: all $ease-main;
+  z-index: 10;
+
+  &--active {
+    margin-left: 0;
+  }
+
+  .menu-col {
+    margin-top: 120px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .link {
+    margin-bottom: 25px;
+  }
+
+  .header__item {
+    display: inline-flex;
+    margin-top: 15px;
+    .link {
+      margin-bottom: 0;
+    }
+  }
+
 }

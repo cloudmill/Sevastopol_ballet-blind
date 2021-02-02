@@ -34,7 +34,7 @@ function parallax() {
 function headerScroll() {
 
   var 
-      header = $('.header-white'),
+      header = $('header'),
       prevScroll = 0,
       total = 0;
   $(window).on('scroll', function(){
@@ -43,14 +43,16 @@ function headerScroll() {
     prevScroll = winScroll;
     
     if ($(this).scrollTop() == 0){
-      header.removeClass('header-white--active');
-      header.removeClass('header-white--top');
+      header.removeClass('header--active');
+      header.removeClass('header--top');
     }else{
       if ((total < 0) && ($(this).scrollTop() !== 0)){
-        header.addClass('header-white--active');
+        header.addClass('header--active');
+        $('.white').css('display', 'block');
+        $('.black').css('display', 'none');
       }else{
-        header.addClass('header-white--top');
-        header.removeClass('header-white--active');
+        header.addClass('header--top');
+        header.removeClass('header--active');
       }
     }
     
