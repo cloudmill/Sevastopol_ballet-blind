@@ -114,6 +114,12 @@
     font-family: $font-main;
     font-size: 60px;
     line-height: 160%;
+    @media (max-width: 1360px){
+      font-size: 45px;
+    }
+    @media (max-width: 1024px){
+      font-size: 30px;
+    }
   }
 
   &--age {

@@ -51,6 +51,9 @@
     font-family: $font-main;
     font-size: 20px;
     line-height: 160%;
+    @media (max-width: 1024px){
+      font-size: 16px;
+    }
   }
 
   &--regal14-12-ital{
@@ -58,6 +61,9 @@
     font-style: italic;
     font-size: 14px;
     line-height: 160%;
+    @media (max-width: 1024px){
+      font-size: 12px;
+    }
   }
 
 }
