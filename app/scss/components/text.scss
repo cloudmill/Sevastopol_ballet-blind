@@ -9,34 +9,34 @@
     }
   }
 
-  &--regal18-14-ital {
+  &--regal16-14-ital {
     font-family: $font-third;
     font-style: italic;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 180%;
     @media (max-width: 1100px) {
       font-size: 16px; 
     }
   }
 
-  &--regal60-20 {
+  &--regal40-20 {
     font-family: $font-second;
-    font-size: 60px;
+    font-size: 40px;
     line-height: 130%;
     @media (max-width: 1490px) {
-      font-size: 40px; 
+      font-size: 30px; 
     }
     @media (max-width: 1100px) {
       font-size: 20px; 
     }
   }
-  &--regal60-20-ital {
+  &--regal40-20-ital {
     font-family: $font-third;
-    font-size: 60px;
+    font-size: 40px;
     line-height: 130%;
     font-style: italic;
     @media (max-width: 1490px) {
-      font-size: 40px; 
+      font-size: 30px; 
     }
     @media (max-width: 1100px) {
       font-size: 20px; 

@@ -5,6 +5,12 @@
     justify-content: space-between;
   }
 
+  &--jc-c {
+    justify-content: center;
+    flex-shrink: 0;
+    width: 90%;
+  }
+
   &--fd-rr {
     flex-direction: row-reverse;
   }
