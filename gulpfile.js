@@ -26,7 +26,7 @@ let gulp = require("gulp"),
   filter = require("filter");
 
 //конфигурации
-let dirDist = "./docs/";
+let dirDist = "./dist/";
 let dirApp = "./app/";
 let dirDocs = "./docs/";
 let _ = {
