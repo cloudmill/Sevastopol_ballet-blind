@@ -1,4 +1,14 @@
+include ../mixins/mixins
+
+.search
+  .content
+    .search-conteiner
+      .search-close
+      input(type='text', placeholder='Поиск', name='s').search-input
+      +lilac-btn-180('Поиск')
+
 header.header
+  
   .burger-menu
     .menu-col
       a(href="#").link
@@ -17,7 +27,7 @@ header.header
         span
         span
         span
-      .header__search-mobile
+      .header__search.header__search-mobile
         img(src="./images/header/search.svg", alt="поиск").white
         img(src="./images/header/search-black.svg", alt="поиск").black
       .row.row--sb-center.row--hg--80.row--none
@@ -27,13 +37,14 @@ header.header
         .header__item
           img(src="./images/header/eye.svg", alt="").white.header__eye
           img(src="./images/header/eye-black.svg", alt="").black.header__eye
-          a(href="#").link Для слабовидящих
+          a(href="#").link.link-b Для слабовидящих
       .header__logo
         img(src="./images/theatre-logo.svg", alt="").header__logo
+        img(src="./images/theatre-logo-black.svg", alt="").header__logo.black
       .header__item
-        a(href="#").link.link--mr-r--60
+        a(href="#").link.link-b.link--mr-r--60
           |Правовые документы
-        a(href="#").link.link--mr-r--60
+        a(href="#").link.link-b.link--mr-r--60
           | Галерея
-        a(href="#").link
+        a(href="#").link.link-b
           | Контакты

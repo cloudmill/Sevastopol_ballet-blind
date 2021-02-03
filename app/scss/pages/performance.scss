@@ -2,6 +2,7 @@
 
   &__inform {
     padding-top: 265px;
+    padding-bottom: 64px;
     @media (max-width:1360px) {
       padding-top: 180px;
     }
@@ -206,7 +207,7 @@
   }
 
   &__where {
-    margin-top: 160px;
+    margin-top: 83px;
     @media (max-width:1360px) {
       margin-top: 120px;
     }
@@ -243,14 +244,17 @@
         width: 76%;
         @media (max-width: 1100px){
           flex-direction: column;
+          // .text {
+          //   white-space: nowrap;
+          // }
+          .col--mw540 {
+            max-width: 100%;
+            margin-bottom: 20px;
+          }
         }
-        .text {
-          white-space: nowrap;
-        }
-        .col--mw540 {
-          max-width: 100%;
-          margin-bottom: 20px;
-        }
+        // @media (max-width: 900px) {
+
+        // }
       }
       @media (max-width:1124px){
         padding: 40px 0;

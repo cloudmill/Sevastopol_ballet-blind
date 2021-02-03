@@ -1,0 +1,51 @@
+extends ../layouts/default.pug
+
+block variables
+ -var pageTitle='Правовые документы'
+
+ block header
+  include ../modules/header
+
+block content
+
+  .doc__list
+    .content
+      .title.title--page Правовые документы
+      .doc__list-conteiner
+        .doc__list-item
+          .row.row--jc-sb
+            .col--mw-500
+              .title.title--inter24-16 Руководящий состав
+            .doc__list-save
+              .col
+                .item
+                  .title.title--regal40-18 Полунин Сергей Владимирович
+                  .text.text--defolt Директор
+                .item
+                  .title.title--regal40-18 Полунин Сергей Владимирович
+                  .text.text--defolt Директор
+        .doc__list-item
+          .row.row--jc-sb
+            .col--mw-500
+              .title.title--inter24-16 Документы
+            .doc__list-save
+              +save-item('РЕГЛАМЕНТ подготовки и проведения культурно-массовых мероприятий сторонними организациями на сцене')
+              +save-item('РЕГЛАМЕНТ подготовки и проведения культурно-массовых мероприятий сторонними организациями на сцене')
+        .doc__list-item
+          .row.row--jc-sb
+            .col--mw-500
+              .title.title--inter24-16 Правила продажи, возврата билетов и посещения мероприятий
+            .doc__list-save
+              +save-item('Инструкция по возврату билетов')
+              +save-item('Приказ № 364 от 09.08.2019 “Об утверждении правил продажи, возврата билетов и посещения мероприятий"')
+              +save-item('“Правила продажи, возврата билетов и посещения мероприятий от 09.08.2019 г.')
+              +save-item('Положение о порядке льготного посещения от 09.08.2019 г.')
+        .doc__list-item
+          .row.row--jc-sb
+            .col--mw-500
+              .title.title--inter24-16 Финансово–хозяйственная деятельность
+            .doc__list-save
+              +save-item('План мероприятий по улучшению оказания качества услуг на 2016 год')
+              +save-item('Отчет об исполнении плана финансово-хозяйственной деятельности на 01.01.2017')
+              +save-item('Сведения о движении нефинансовых активов на 01.01.2017')
+              +save-item('Пояснительная записка к балансу учреждения на 01.01.2017')

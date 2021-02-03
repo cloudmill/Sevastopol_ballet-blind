@@ -21,6 +21,24 @@
     }
   }
 
+  &--regal40-18 {
+    font-family: $font-second;
+    font-size: 40px;
+    line-height: 100%;
+    @media (max-width: 1360px){
+      font-size: 35px;
+    }
+    @media (max-width: 1280px){
+      font-size: 30px;
+    }
+    @media (max-width: 1024px){
+      font-size: 23px;
+    }
+    @media (max-width: 768px){
+      font-size: 18px;
+    }
+  }
+
   &--nomber {
     font-family: $font-second;
     font-size: 150px;
@@ -57,23 +75,23 @@
     }
   }
 
-  // &--section-tas {
-  //   font-family: $font-second;
-  //   font-size: 90px;
-  //   line-height: 1;
-  //   width: 100%;
-  //   text-align: start;
-  //   @media (max-width: 1280px){
-  //     font-size: 70px;
-  //   }
-  //   @media (max-width: 1024px){
-  //     font-size: 50px;
-  //   }
-  //   @media (max-width: 768px){
-  //     font-size: 30px;
-  //     text-align: left;
-  //   }
-  // }
+  &--section-tas {
+    font-family: $font-second;
+    font-size: 60px;
+    line-height: 1;
+    width: 100%;
+    text-align: start;
+    @media (max-width: 1280px){
+      font-size: 70px;
+    }
+    @media (max-width: 1024px){
+      font-size: 50px;
+    }
+    @media (max-width: 768px){
+      font-size: 30px;
+      text-align: left;
+    }
+  }
 
   &--date {
     font-family: $font-main;
@@ -107,6 +125,17 @@
       font-size: 23px;
     }
     @media (max-width: 768px){
+      font-size: 16px;
+    }
+  }
+  &--inter24-16 {
+    font-family: $font-main;
+    font-size: 24px;
+    line-height: 160%;
+    @media (max-width: 1360px){
+      font-size: 20px;
+    }
+    @media (max-width: 1024px){
       font-size: 16px;
     }
   }

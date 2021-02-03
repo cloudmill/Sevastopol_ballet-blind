@@ -1,3 +1,12 @@
+include ../mixins/mixins
+
+.search
+  .content
+    .search-conteiner
+      .search-close
+      input(type='text', placeholder='Поиск', name='s').search-input
+      +lilac-btn-180('Поиск')
+
 header.header-white
   .burger-menu
     .menu-col

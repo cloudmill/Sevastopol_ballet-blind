@@ -55,6 +55,17 @@
       font-size: 16px;
     }
   }
+  &--inter16-12 {
+    font-family: $font-main;
+    font-size: 16px;
+    line-height: 160%;
+    @media (max-width: 1360px){
+      font-size: 14px;
+    }
+    @media (max-width: 1024px){
+      font-size: 12px;
+    }
+  }
 
   &--regal14-12-ital{
     font-family: $font-third;
