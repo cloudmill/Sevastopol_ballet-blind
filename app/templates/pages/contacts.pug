@@ -1,0 +1,29 @@
+extends ../layouts/default.pug
+
+block variables
+ -var pageTitle='Контакты'
+
+ block header
+  include ../modules/header
+
+block content
+
+  .contact__wrapp
+    .content
+      .title.title--page Контакты
+      .row.row--jc-sb.fst
+        .contact__wrapp-conteiner
+          .row 
+            .col
+              .contact__wrapp-tooltip
+                img(src="./images/pin.svg", alt="")
+            .col
+              .title.title--inter40-16 299011, г. Севастополь, бульвар Исторический, д. 1
+              a(href="#").text.text--inter16-12.text--lilac Схема проезда
+          .row.row--aln-c
+            .col
+              .contact__wrapp-tooltip
+                img(src="./images/mail.svg", alt="")
+            .col
+              .title.title--inter40-16 sevardt@sev.gov.ru
+        .col

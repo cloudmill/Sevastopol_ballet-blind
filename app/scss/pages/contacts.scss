@@ -1,0 +1,28 @@
+.contact {
+
+  &__wrapp {
+    padding-top: 270px;
+    @media (max-width:1360px) {
+      padding-top: 180px;
+    }
+    @media (max-width:1024px) {
+      padding-top: 93px;
+    }
+
+    .fst {
+      margin-top: 82px;
+    }
+
+    &-conteiner {
+      padding: 40px 60px;
+      border-radius: 10px;
+      width: calc((100% - 60px) / 2);
+      margin-right: 20px;
+      background-color: white;
+    }
+
+    &-tooltip {
+      // margin-right: 10px;
+    }
+  }
+}

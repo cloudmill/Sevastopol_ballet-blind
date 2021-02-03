@@ -24,6 +24,10 @@
     align-items: flex-end;
   }
 
+  &--aln-c {
+    align-items: center;
+  }
+
   &--sb-center {
     position: relative;
     justify-content: space-between;
