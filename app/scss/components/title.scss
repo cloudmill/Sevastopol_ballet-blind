@@ -157,6 +157,18 @@
     }
   }
 
+  &--inter24-18 {
+    font-family: $font-main;
+    font-size: 24px;
+    line-height: 160%;
+    @media (max-width: 1360px){
+      font-size: 20px;
+    }
+    @media (max-width: 1024px){
+      font-size: 18px;
+    }
+  }
+
   &--inter60-30 {
     font-family: $font-main;
     font-size: 60px;

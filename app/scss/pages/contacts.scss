@@ -11,14 +11,78 @@
 
     .fst {
       margin-top: 82px;
+      align-items: flex-start;
+      @media (max-width: 765px){
+        flex-direction: column;
+      }
+
+      .col-mw-616 {
+        width: 616px;
+        @media (max-width: 765px){
+          width: 100%;
+        }
+      }
     }
 
     &-conteiner {
-      padding: 40px 60px;
+      padding: 40px 60px 40px 37px;
       border-radius: 10px;
       width: calc((100% - 60px) / 2);
-      margin-right: 20px;
+      min-width: 351px;
+      margin-right: 40px;
       background-color: white;
+      @media (max-width: 1124px){
+        padding: 20px 20px 20px 0;
+      }
+      @media (max-width: 765px){
+        width: 100%;
+        min-width: 280px;
+        margin-right: 0;
+        margin-bottom: 80px;
+        padding: 15px 10px 5px 0;
+      }
+
+      .text--lilac {
+        display: block;
+        margin-top: 17px;
+      }
+      .row--aln-c {
+        margin-top: 22px;
+        @media (max-width: 1124px){
+          margin-top: 0;
+        }
+      }
+    }
+
+    &-item {
+
+      .text--defolt {
+        margin-top: 10px;
+      }
+      .row--aln-c {
+        margin-top: 7px;
+        margin-left: -20px;
+
+        span {
+          color: $lilac;
+          border-bottom: 1px solid $lilac;
+        }
+      }
+      .al-c {
+        align-items: center;
+        margin-top: 17px;
+      }
+    }
+
+    &-item--mrg {
+      margin: 15px 0 34px;
+      padding: 33px 0;
+      border-bottom: 1px solid #D3CBA8;
+      border-top: 1px solid #D3CBA8;
+      @media (max-width: 765px){
+        margin: 15px 0 20px;
+        padding: 20px 0;
+      }
     }
 
     &-tooltip {

@@ -823,6 +823,7 @@
     }
     a {
       display: block;
+      width: 75px;
     }
 
     &-conteiner {
@@ -860,7 +861,6 @@
 
     &-link {
       display: block;
-      text-decoration-line: underline;
       transition: all $ease-main;
 
       &:hover {

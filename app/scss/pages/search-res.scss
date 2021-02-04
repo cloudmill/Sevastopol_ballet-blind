@@ -1,0 +1,78 @@
+.search {
+
+  &__block {
+    padding-top: 270px;
+    @media (max-width:1360px) {
+      padding-top: 180px;
+    }
+    @media (max-width:1024px) {
+      padding-top: 93px;
+    }
+
+    &-input {
+      width: 100%;
+      height: 50px;
+      font-size: 18px;
+      line-height: 180%;
+      color: #354F9A;
+      border: none;
+      border-bottom: 1px solid #D1DFF1;
+      transition: all $ease-main;
+      background-color: transparent;
+      margin-right: 75px;
+      @media (max-width: 570px){
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+
+      &:focus {
+        border-bottom: 1px solid #354F9A;
+      }
+      &::placeholder {
+        font-size: 18px;
+        line-height: 180%;
+        color: black;
+      }
+    }
+    .lilac-btn {
+      width: 140px;
+    }
+    .row-mrg {
+      margin: 70px 0 60px;
+      padding-top: 10px;
+      @media (max-width:1280px){
+        margin: 50px 0 40px;
+      }
+      @media (max-width: 570px){
+        flex-direction: column;
+      }
+    }
+
+    &-conteiner {
+      margin-top: 55px;
+      & :last-child {
+        margin-bottom: 0;
+      }
+      @media (max-width:1280px){
+        margin-top: 35px;
+      }
+    }
+
+    &-item {
+      padding: 40px 136px 40px 75px;
+      margin-bottom: 20px;
+      background-color: white;
+      border-radius: 10px;
+      @media (max-width:1280px){
+        padding: 30px 60px 20px 40px;
+      }
+      @media (max-width:760px){
+        padding: 20px;
+      }
+
+      .text {
+        margin-top: 15px;
+      }
+    }
+  }
+}

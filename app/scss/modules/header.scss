@@ -224,6 +224,9 @@
     height: 34px;
     cursor: pointer;
     margin-right: 80px;
+    transform-origin: center center;
+    transition: all $ease-main;
+
 
     &::before, &::after {
       content: '';
@@ -236,6 +239,10 @@
     }
     &::after {
       transform: rotate(-45deg);
+    }
+
+    &:hover {
+      transform: rotate(90deg);
     }
   }
   &-input {
