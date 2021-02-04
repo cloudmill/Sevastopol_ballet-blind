@@ -1,4 +1,4 @@
-import $ from "jquery";
+import $, { event } from "jquery";
 import App from "./main.js";
 import Swiper from 'swiper';
 
@@ -13,6 +13,7 @@ $(document).ready(function() {
   performSlider();
   headerScroll();
   search();
+  close();
 });
 
 function burger() {
@@ -45,6 +46,22 @@ function search(){
   });
 }
 
+close = function(){
+  let searchBl = $('.search');
+  $(window).on('click', function(event){
+    if (searchBl.hasClass('search--active') && event.pageY > 155){
+      searchBl.removeClass('search--active');
+    }
+  });
+
+  $(document).on('keydown',function(event){
+    if ( event.keyCode == 27 ){
+      searchBl.removeClass('search--active');
+    }
+  });
+}
+
+
 function headerScroll() {
 
   var 
@@ -56,7 +73,7 @@ function headerScroll() {
     total = winScroll - prevScroll;
     prevScroll = winScroll;
     
-    if ($(this).scrollTop() == 0){
+    if ($(this).scrollTop() <= 200){
       header.removeClass('header--active');
       header.removeClass('header--top');
       $('.white').css('display', 'none');
@@ -76,8 +93,6 @@ function headerScroll() {
         $('.link-b').css('color', 'black');
       }
     }
-    
-
   });
 }
 
