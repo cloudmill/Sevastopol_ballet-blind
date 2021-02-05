@@ -18,6 +18,7 @@ $(document).ready(function() {
   close();
   indexTooltip();
   infoScroll();
+  greetingSlider();
 });
 
 function inAos() {
@@ -225,6 +226,22 @@ function performSlider() {
     navigation: {
       nextEl: '.perform__next',
       prevEl: '.perform__prev',
+    },
+  });
+}
+
+
+function greetingSlider() {
+  var performSlide = new Swiper('.index__greeting-wrap', {
+    slidesPerView: 'auto',
+    centerSlides: true,
+    pagination: {
+      el: '.perfom__picture-pagination',
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: '.greeting__next',
+      prevEl: '.greeting__prev',
     },
   });
 }
