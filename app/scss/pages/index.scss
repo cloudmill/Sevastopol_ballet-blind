@@ -215,6 +215,11 @@
       .index__video-play {
         animation: jump 1.5s 0s ease infinite ;
       }
+      .index__video-filter {
+        background-color: rgba(228, 224, 206, 0.6);
+        background: #354F9A;
+        opacity: 0.6;
+      }
     }
 
     &-filter {
@@ -227,11 +232,11 @@
       border-radius: 10px;
       transition: all $ease-main;
 
-      &:hover {
-        background-color: rgba(228, 224, 206, 0.6);
-        background: #354F9A;
-        opacity: 0.6;
-      }
+      // &:hover {
+      //   background-color: rgba(228, 224, 206, 0.6);
+      //   background: #354F9A;
+      //   opacity: 0.6;
+      // }
 
       &::before, &::after {
         content: '';
@@ -460,6 +465,39 @@
     .row {
       @media (max-width: 750px){
         display: block;
+      }
+    }
+
+    .sup {
+      position: relative;
+    }
+
+    .tooltip {
+      position: absolute;
+      min-width: 274px;
+      bottom: 30px;
+      right: 50%;
+      transform: translateX(50%);
+      background-image: url('../images/index-tool.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 20px 40px 40px;
+      transition: all $ease-main;
+      z-index: 1;
+      margin-bottom: 100px;
+      opacity: 0;
+
+      &--active { 
+        margin-bottom: 0;
+        opacity: 1;
+      }
+      
+
+      .text {
+        text-align: center;
+      }
+      .text--inter-defolt {
+        color: black;
       }
     }
 

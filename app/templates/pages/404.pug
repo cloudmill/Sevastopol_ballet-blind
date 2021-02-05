@@ -1,0 +1,25 @@
+extends ../layouts/default.pug
+
+block variables
+ -var pageTitle='404'
+
+ block header
+  include ../modules/header
+
+block content
+
+  .none__cont
+    .content
+      .row
+        .col
+          .none__cont-title 404
+        .col
+          .none__cont-text Страница не найдена.
+          +lilac-btn-180('Перейти на главную')
+
+
+
+
+
+block footer
+  include ../modules/footer

@@ -9,16 +9,16 @@ block header
 block content
     
   .index__start 
-    h1.index__start-title.parallax
+    h1.index__start-title.parallax(data-aos="zoom-in")
       | Севастопольский
       br 
       |Театр оперы и балета
     img(src="./images/mouse.svg", alt="").index__start-mouse.parallax
     img(src="./images/wave.svg", alt="").index__start-wave
-  .index__info
+  .index__info#info
     .content
       .row.row--jc-sb
-        .col
+        .col(data-aos='fade-up', data-aos-duration='4000')
           p.text.text--regal40-20 Миссия уникального центра
             br 
             |  искусств — 
@@ -30,7 +30,7 @@ block content
             | на совершенно
             br
             | новом уровне.
-        .col
+        .col(data-aos='fade-up')
           p.text.text--inter-defolt Театр является частью одного из четырех
             br
             | федеральных культурно–образовательных
@@ -50,7 +50,7 @@ block content
   .index__slider
     .content
       .row.row--jc-sb.block
-        .col
+        .col(data-aos='fade-up')
           .index__slider-conteiner
             .swiper-wrapper
               .swiper-slide.index__slider-slide
@@ -59,7 +59,7 @@ block content
                 img(src="./images/index-slide.png", alt="")
               .swiper-slide.index__slider-slide
                 img(src="./images/index-slide.png", alt="")
-        .col.end
+        .col.end(data-aos='fade-up')
           .row.row--sb-center
             .index__slider-pagination
             +slider-btn('index__prev', 'index__next')
@@ -69,7 +69,7 @@ block content
               span.text--lilac национального проекта «Культура».
   .index__video
     .content 
-      .index__video-wrap
+      .index__video-wrap(data-aos='fade-up')
         .index__video-filter
         img(src="./images/index-video.png", alt="").index__video-fone
         .index__video-information
@@ -80,7 +80,7 @@ block content
           .index__video-time 2:15
   .index__greeting
     .content
-      .index__greeting-wrap
+      .index__greeting-wrap(data-aos='fade-up')
         .swiper-wrapper
           .index__greeting-slide
             .index__greeting-man
@@ -98,16 +98,19 @@ block content
   .index__opening
     .content
       .row
-        .col--mw-720
+        .col--mw-720(data-aos='fade-up')
           .title.title--regal40-20 Открытие учреждения
             br
             | запланировано
             span.title.title--regal40-20.title--lilac  на 2023 год.
-              sup 
-                img(src="./images/question.svg", alt="")
+              sup.sup
+                img(src="./images/question.svg", alt="").sup-img
+                .tooltip
+                  .text.text--inter-defolt До открытия осталось:
+                  .text.text--regal40-20.text--lilac 468 дней
             br
             |  Его большая сцена будет рассчита на на 1100 мест, малая — на 200. Расположится театр на мысе Хрустальном.
-        .row--aln-i
+        .row--aln-i(data-aos='fade-up')
           .col--mrg-r
             .title.title--nomber 1100
             .text.text--inter-defolt мест большой сцены
@@ -118,14 +121,14 @@ block content
     .content
       .row.row--jc-sb
         .col.col--mw-260
-          .col-mw-345
+          .col-mw-345(data-aos='fade-up')
             .text.text--inter-defolt Севастопольский государственный театр оперы и балета учрежден распоряжением Правительства Российской Федерации во исполнение Указа Президента Российской Федерации от 7 мая 2018 г. № 204
               span.text.text--regal16-14-ital  «О национальных целях и стратегических задачах развития Российской Федерации на период до 2024 года»
 
-          .row.row--sb-center
+          .row.row--sb-center(data-aos='fade-up')
             .index__instit-pagination
             +slider-btn('instit__prev', 'instit__next')
-        .col
+        .col(data-aos='fade-up')
           .index__instit-slider
             .swiper-wrapper
               .swiper-slide.index__instit-slide
@@ -136,12 +139,12 @@ block content
                 img(src="./images/instit-slide.png", alt="")
   .index__event
     .content
-      .row.row--jc-c
+      .row.row--jc-c(data-aos='fade-up')
         .title.title--section Ближайшие
           br
           | мероприятия
       .index__event-conteiner
-        .index__event-announce
+        .index__event-announce(data-aos='fade-up')
           .row.row--jc-sb
             .row.date
               .col
@@ -153,7 +156,7 @@ block content
               .text.text--regal16-14-ital Нина Тимофеева, Наталья Рыженко
               .text--inter-defolt Сцена ДК им. Ленсовета 
           +lilac-btn-180('Подробнее')
-        .index__event-announce
+        .index__event-announce(data-aos='fade-up')
           .row.row--jc-sb
             .row.date
               .col
@@ -165,7 +168,7 @@ block content
               .text.text--regal16-14-ital Нина Тимофеева, Наталья Рыженко
               .text--inter-defolt Сцена ДК им. Ленсовета 
           +lilac-btn-180('Подробнее')
-        .index__event-announce
+        .index__event-announce(data-aos='fade-up')
           .row.row--jc-sb
             .row.date
               .col
@@ -178,7 +181,7 @@ block content
               .text--inter-defolt Сцена ДК им. Ленсовета 
           +lilac-btn-180('Подробнее')
   .index__gallery
-    .content
+    .content(data-aos='fade-up')
       .row.row--jc-sb
         .row.row--jc-c
           .title.title--section Галерея
@@ -223,19 +226,19 @@ block content
                 | Фауста
   .index__note
     .content
-      .index__note-conteiner
+      .index__note-conteiner(data-aos='fade-up')
         .index__note-date 25 авг 2020
         .row.row--jc-sb
           .title.title--regal40-20 Севастопольский театр оперы и балета запускает новую программу.
           .text.text--inter-defolt Открытие учреждения запланировано на 2023 год. Его большая сцена будет рассчитана на 1100 мест, малая — на 200. Расположится театр на мысе Хрустальном.
   .index__media
     .content
-      .row.row--jc-sb
+      .row.row--jc-sb(data-aos='fade-up')
         .row.row--jc-c
           .title.title--section СМИ о театре
         +slider-btn('media-next', 'media-prev')
       .index__media-conteiner
-        .swiper-wrapper
+        .swiper-wrapper(data-aos='fade-up')
           .swiper-slide.index__media-item
             .index__media-date 25 авг 2020
             a(href="#").title.title--regsl30-20 Севастопольский театр оперы и балета запускает новую программу
