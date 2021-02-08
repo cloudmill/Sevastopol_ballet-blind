@@ -19,6 +19,8 @@ $(document).ready(function() {
   indexTooltip();
   infoScroll();
   greetingSlider();
+  galSlider();
+  youtube();
 });
 
 function inAos() {
@@ -243,5 +245,52 @@ function greetingSlider() {
       nextEl: '.greeting__next',
       prevEl: '.greeting__prev',
     },
+  });
+}
+
+
+function galSlider() {
+  var galleryThumbs = new Swiper('.modal__gallery-thumbs', {
+    spaceBetween: 1,
+    slidesPerView: 'auto',
+    // freeMode: true,
+    // watchSlidesVisibility: true,
+    // watchSlidesProgress: true,
+  });
+  // var galleryTop = new Swiper('.modal__gallery-top', {
+  //   spaceBetween: 10,
+  //   // navigation: {
+  //   //   nextEl: '.swiper-button-next',
+  //   //   prevEl: '.swiper-button-prev',
+  //   // },
+  //   thumbs: {
+  //     swiper: galleryThumbs
+  //   }
+  // });
+
+  var performSlide = new Swiper('.modal__gallery-top', {
+    slidesPerView: 'auto',
+    centerSlides: true,
+    pagination: {
+      el: '.perfom__picture-pagination',
+      type: 'fraction',
+    },
+    thumbs: {
+      swiper: galleryThumbs
+    }
+  });
+}
+
+function youtube() {
+  $('.index__video-play').on('click', function(){
+    $('.video').addClass('video--active');
+  });
+  $('.video-close').on('click', function(){
+    $('.video').removeClass('video--active');
+  });
+  $(document).on('keydown',function(event){
+    if ( (event.keyCode == 27) && $('.video').hasClass('video--active') ){
+      $('.video').removeClass('video--active');
+    }
   });
 }

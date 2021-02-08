@@ -9,6 +9,8 @@
   transition: all $ease-main;
   right: 0;
   left: 0;
+  max-width: 1920px;
+  margin: 0 auto;
   @media (max-width: 1150px){
     padding: 20px 0;
     max-height: 70px;
@@ -40,6 +42,8 @@
     right: 0;
     left: 0;
     z-index: 5;
+    max-width: 1920px;
+    margin: 0 auto;
     @media (max-width: 1150px){
       padding: 20px 0;
       max-height: 70px;
@@ -191,7 +195,7 @@
   left: 0;
   width: 95vw;
   height: 100vh;
-  margin-left: -100vw;
+  margin-left: -110vw;
   background: #354F9A;
   transition: all $ease-main;
   z-index: 10;
