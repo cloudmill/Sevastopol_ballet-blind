@@ -211,6 +211,10 @@
   &__video {
     position: relative;
 
+    .index__video-play {
+      cursor: pointer;
+    }
+
     &:hover {
       .index__video-play {
         animation: jump 1.5s 0s ease infinite ;
