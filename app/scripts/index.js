@@ -251,7 +251,7 @@ function greetingSlider() {
 
 function galSlider() {
   var galleryThumbs = new Swiper('.modal__gallery-thumbs', {
-    spaceBetween: 1,
+    spaceBetween: 10,
     slidesPerView: 'auto',
     // freeMode: true,
     // watchSlidesVisibility: true,
@@ -269,8 +269,9 @@ function galSlider() {
   // });
 
   var performSlide = new Swiper('.modal__gallery-top', {
-    slidesPerView: 'auto',
+    slidesPerView: 1,
     centerSlides: true,
+    spaceBetween: 50,
     pagination: {
       el: '.perfom__picture-pagination',
       type: 'fraction',
