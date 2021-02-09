@@ -7,8 +7,9 @@ block header
   include ../modules/header-white
 
 block content
-    //- (data-aos="zoom-in")
+  
   .index__start 
+    //- (data-aos="zoom-in")
     h1.index__start-title.parallax
       | Севастопольский
       br 
@@ -228,7 +229,7 @@ block content
         +slider-btn('gallery-prev', 'gallery-next')
     .index__gallery-conteiner
       .swiper-wrapper
-        .swiper-slide.index__gallery-slide
+        .swiper-slide.index__gallery-slide.js--modal(data-name="index-gal")
           .row
             .col--img
               img(src="./images/gallery-slide.png", alt="")
@@ -240,7 +241,7 @@ block content
               .title.title--regal40-20 Осуждение
                 br
                 | Фауста
-        .swiper-slide.index__gallery-slide
+        .swiper-slide.index__gallery-slide.js--modal(data-name="index-gal")
           .row
             .col--img
               img(src="./images/gallery-slide.png", alt="")
@@ -252,7 +253,7 @@ block content
               .title.title--regal40-20 Осуждение
                 br
                 | Фауста
-        .swiper-slide.index__gallery-slide
+        .swiper-slide.index__gallery-slide.js--modal(data-name="index-gal")
           .row
             .col--img
               img(src="./images/gallery-slide.png", alt="")
@@ -319,13 +320,12 @@ block content
     .content
       .video-close
       iframe( src="https://www.youtube.com/embed/ex4PS6KOA3A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
-  
+  //- block modal
+  //-   include ../modules/modal   
 
   
         
 
 block footer
   include ../modules/footer-index
-
-
-        
+     

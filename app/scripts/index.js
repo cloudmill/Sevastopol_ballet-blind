@@ -21,6 +21,9 @@ $(document).ready(function() {
   greetingSlider();
   galSlider();
   youtube();
+  modal();
+  indSlider();
+  perSlider();
 });
 
 function inAos() {
@@ -104,9 +107,12 @@ function indexTooltip(){
 }
 
 function infoScroll() {
-  let top = $('#info').offset().top;
+  
   $('.index__start-mouse').on('click', function(){
+    if ($('#info').length){
+    let top = $('#info').offset().top;
     $('body,html').animate({scrollTop: top}, 1000);
+    }
   });
 }
 
@@ -121,7 +127,7 @@ function headerScroll() {
     total = winScroll - prevScroll;
     prevScroll = winScroll;
     
-    if ($(this).scrollTop() <= 200){
+    if ($(this).scrollTop() <= 150){
       header.removeClass('header--active');
       header.removeClass('header--top');
       $('.white').css('display', 'none');
@@ -234,7 +240,7 @@ function performSlider() {
 
 
 function greetingSlider() {
-  var performSlide = new Swiper('.index__greeting-wrap', {
+  var greetSlide = new Swiper('.index__greeting-wrap', {
     slidesPerView: 'auto',
     centerSlides: true,
     pagination: {
@@ -248,52 +254,27 @@ function greetingSlider() {
   });
 }
 
-
-function galSlider() {
-  var galleryThumbs = new Swiper('.modal__gallery-thumbs', {
-    spaceBetween: 10,
-    slidesPerView: 'auto',
-    // freeMode: true,
-    // watchSlidesVisibility: true,
-    // watchSlidesProgress: true,
-  });
-  // var galleryTop = new Swiper('.modal__gallery-top', {
-  //   spaceBetween: 10,
-  //   // navigation: {
-  //   //   nextEl: '.swiper-button-next',
-  //   //   prevEl: '.swiper-button-prev',
-  //   // },
-  //   thumbs: {
-  //     swiper: galleryThumbs
-  //   }
-  // });
-
-  var performSlide = new Swiper('.modal__gallery-top', {
-    slidesPerView: 1,
-    centerSlides: true,
-    spaceBetween: 50,
-    pagination: {
-      el: '.perfom__picture-pagination',
-      type: 'fraction',
-    },
-    navigation: {
-      nextEl: '.modal-slider-next',
-      prevEl: '.modal-slider-prev',
-    },
-    thumbs: {
-      swiper: galleryThumbs
-    }
-  });
-}
-
 function modal() {
   $('.js--modal').on('click', function(){
-    data = $('.modal').data('name');
+    let data = $(this).data('name');
     $('.modal').each(function(){
       if ( $(this).data('name') == data){
-        $(this).addClass('modal--active')
+        $(this).addClass('modal--active');
       }
+      console.log($(this).data('name'));
+      console.log(data);
+      console.log($('.modal'));
     });
+  });
+
+  $('.modal__wrapper-close').on('click', function(){
+    $('.modal').removeClass('modal--active');
+  });
+
+  $(document).on('keydown',function(event){
+    if ( (event.keyCode == 27) && $('.modal').hasClass('modal--active') ){
+      $('.modal').removeClass('modal--active');
+    }
   });
 }
 
@@ -308,5 +289,67 @@ function youtube() {
     if ( (event.keyCode == 27) && $('.video').hasClass('video--active') ){
       $('.video').removeClass('video--active');
     }
+  });
+}
+
+function galSlider() {
+  var galThumbs = new Swiper('.gal-bottom', {
+    spaceBetween: 10,
+    slidesPerView: 'auto',
+    
+  });
+  
+
+  var galSlide = new Swiper('.gal-top', {
+    slidesPerView: 'auto',
+    centerSlides: true,
+    spaceBetween: 50,
+    navigation: {
+      nextEl: '.gal-next',
+      prevEl: '.gal-prev',
+    },
+    thumbs: {
+      swiper: galThumbs
+    },
+  });
+}
+function perSlider() {
+  var perThumbs = new Swiper('.per-bottom', {
+    spaceBetween: 10,
+    slidesPerView: 'auto',
+    
+  });
+  
+  var perSlide = new Swiper('.per-top', {
+    slidesPerView: 'auto',
+    centerSlides: true,
+    spaceBetween: 50,
+    navigation: {
+      nextEl: '.per-next',
+      prevEl: '.per-perv',
+    },
+    thumbs: {
+      swiper: perThumbs
+    },
+  });
+}
+function indSlider() {
+  var indThumbs = new Swiper('.ind-bottom', {
+    spaceBetween: 10,
+    slidesPerView: 'auto',
+    
+  });
+  
+  var indSlide = new Swiper('.ind-top', {
+    slidesPerView: 'auto',
+    centerSlides: true,
+    spaceBetween: 50,
+    navigation: {
+      nextEl: '.ind-next',
+      prevEl: '.ind-prev',
+    },
+    thumbs: {
+      swiper: indThumbs
+    },
   });
 }
