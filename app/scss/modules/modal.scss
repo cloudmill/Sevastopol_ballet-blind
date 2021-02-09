@@ -53,6 +53,84 @@
 
   &__wrapper {
     padding-top: 60px;
+    @media (max-width: 1280px){
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 0;
+    }
+  }
+
+  .slider-button-prev, .slider-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .slider-button-next {
+    right: 60px;
+    @media (max-width: 1024px){
+      right: 20px;
+    }
+    @media (max-width: 524px){
+      right: 10px;
+    }
+    @media (max-width: 360px){
+      right: 5px;
+    }
+  }
+  .slider-button-prev {
+    left: 60px;
+    @media (max-width: 1024px){
+      left: 20px;
+    }
+    @media (max-width: 524px){
+      left: 10px;
+    }
+    @media (max-width: 360px){
+      left: 5px;
+    }
+  }
+
+  .modal__wrapper-close {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 60px;
+    right: 60px;
+    cursor: pointer;
+    transition: all $ease-main;
+    @media (max-width: 1024px){
+      width: 25px;
+      height: 25px;
+      top: 20px;
+      right: 20px;
+    }
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 4px;
+      top: 18px;
+      transform: rotate(45deg);
+      background-color: white;
+      transition: all $ease-main;
+      @media (max-width: 1024px){
+        width: 25px;
+        height: 3px;
+        top: 11.5px;
+      }
+      
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+    &:hover {
+      transform: rotate(90deg);
+      &::before, &::after {
+        background-color: #5C77A6;
+      }
+    }
   }
 
 
@@ -63,8 +141,12 @@
     width: 100%;
     max-height: 110px;
     display: flex;
+    justify-content: center;
     margin: 0 auto;
     bottom: 20px;
+    @media (max-width: 768px){
+      max-height: 55px;
+    }
      
     .swiper-wrapper {
       width: auto;
@@ -74,8 +156,7 @@
       width: auto;
       position: relative;
 
-      &::before {
-        content: '';
+      & .filter {
         position: absolute;
         top: 0;
         right: 0;
@@ -84,35 +165,91 @@
         background-color: rgba(33, 38, 44, 0.7);
       }
       img {
-        max-height: 110px;
+        max-height: 100px;
+        @media (max-width: 768px){
+          max-height: 50px;
+        }
       }
+    }
+    .swiper-slide-thumb-active {
+      border: white solid 3px;
+      @media (max-width: 768px){
+        border: white solid 2px;
+      }
+    }
+    .swiper-slide-thumb-active .filter {
+      background-color: transparent;
     }
   }
 
   .modal__gallery-top {
     max-width: 1155px;
-    margin: 60px auto 0;
+    margin: 0 auto 0;
     overflow: hidden;
+
+    @media (max-width: 1450px){
+      max-width: 850px;
+    }
+    @media (max-width: 1024px){
+      max-width: 680px;
+    }
+    @media (max-width: 770px){
+      max-width: 450px;
+    }
+    @media (max-width: 524px){
+      max-width: 300px;
+    }
+    @media (max-width: 360px){
+      max-width: 280px;
+    }
     .text--regal24-14 {
       width: 100%;
       text-align: center;
       color: white;
     }
     
-    .swiper-sllide {
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @media (max-width: 1450px){
+        max-width: 850px;
+      }
+      @media (max-width: 1024px){
+        max-width: 680px;
+      }
+      @media (max-width: 770px){
+        max-width: 450px;
+      }
+      @media (max-width: 524px){
+        max-width: 300px;
+      }
+      @media (max-width: 360px){
+        max-width: 280px;
+      }
 
 
       img {
+        margin-bottom: 20px;
         width: 100%;
-        max-width: 550px;
-        margin: 0 auto;
+        max-width: 1155px;
+        @media (max-width: 1450px){
+          max-width: 850px;
+        }
+        @media (max-width: 1024px){
+          max-width: 680px;
+        }
+        @media (max-width: 770px){
+          max-width: 450px;
+          margin-bottom: 10px;
+        }
+        @media (max-width: 524px){
+          max-width: 300px;
+        }
+        @media (max-width: 360px){
+          max-width: 280px;
+        }
       }
     }
-  }
-  .swiper-slide-thumb-active {
-    border: white solid 3px;
-  }
-  .swiper-slide-thumb-active, .swiper-slide::before {
-    background-color: transparent;
   }
 }

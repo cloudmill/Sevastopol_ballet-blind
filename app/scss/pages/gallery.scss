@@ -85,7 +85,7 @@
       }
       
       img {
-        max-width: 345px;
+        // max-width: 345px;
         width: 100%;
         @media (max-width: 1280px) {
           max-width: 100%;
@@ -118,6 +118,9 @@
 
         .col-fil {
           width: 70.09%;
+          @media (max-width: 1280px) {
+            width: 100%;
+          }
         }
 
         img {
@@ -145,7 +148,7 @@
           &--mobile {
             display: none;
             @media (max-width: 1285px) {
-              display: flex;
+              display: block;
             }
           }
         }

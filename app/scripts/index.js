@@ -276,9 +276,20 @@ function galSlider() {
       el: '.perfom__picture-pagination',
       type: 'fraction',
     },
+    navigation: {
+      nextEl: '.modal-slider-next',
+      prevEl: '.modal-slider-prev',
+    },
     thumbs: {
       swiper: galleryThumbs
     }
+  });
+}
+
+function modal() {
+  $('.js--modal').on('click', function(){
+    // $('[]')
+    // $('.')
   });
 }
 
