@@ -288,8 +288,12 @@ function galSlider() {
 
 function modal() {
   $('.js--modal').on('click', function(){
-    // $('[]')
-    // $('.')
+    data = $('.modal').data('name');
+    $('.modal').each(function(){
+      if ( $(this).data('name') == data){
+        $(this).addClass('modal--active')
+      }
+    });
   });
 }
 
