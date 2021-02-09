@@ -1,6 +1,6 @@
 .footer {
   position: relative;
-  min-height: 445px;
+  min-height: 374px;
   margin-top: 160px;
   padding: 110px 0 80px;
   background-image: url("../images/footer-fon.svg");
@@ -86,7 +86,7 @@
     }
   }
   .text {
-    margin: 37px 0 10px;
+    margin: 56px 0 10px;
     z-index: 1;
     // @media (max-width: 768px){
     //   margin: 40px 0 10px;
@@ -104,6 +104,7 @@
     width: 100%;
     display: flex;
     z-index: 1;
+    margin-bottom: 30px;
     @media (max-width: 1280px){
       max-width: 525px;
     }
@@ -141,10 +142,12 @@
   }
   .abs {
     position: absolute;
-    bottom: 50px;
-    right: 60px;
+    bottom: 27px;
+    right: 62px;
     left: 60px;
-    align-items: flex-end;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+
     @media (max-width: 1280px){
       right: 40px;
       left: 40px;
