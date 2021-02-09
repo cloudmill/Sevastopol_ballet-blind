@@ -213,7 +213,7 @@
           right: 0;
           transition: all $ease-main; 
           z-index: 3;
-          transform: translateY(50%);
+          // transform: translateY(50%);
           opacity: 0;
         }
         .first {
@@ -226,7 +226,7 @@
           // }
           .second {
             opacity: 1;
-            transform: translateY(0);
+            // transform: translateY(0);
           }
         }
       }
