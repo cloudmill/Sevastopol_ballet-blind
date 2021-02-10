@@ -15,6 +15,7 @@ block content
       br 
       |Театр оперы и балета
     img(src="./images/mouse.svg", alt="").index__start-mouse.parallax
+    //- <a id="specialButton" href="#"><img src="https://lidrekon.ru/images/special.png" alt="ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ" title="ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ" /></a>
     img(src="./images/wave.svg", alt="").index__start-wave
   .index__info#info
     .content
@@ -67,7 +68,7 @@ block content
           .index__slider-culture
             img(src="./images/culture.svg", alt="")
             p.text.text--inter-defolt Направление обозначено Президентом как один из приоритетов 
-              span.text--lilac национального проекта «Культура».
+              a(href="#").text--lilac национального проекта «Культура».
   .index__video
     .content 
       .index__video-wrap(data-aos='fade-up')
@@ -95,7 +96,7 @@ block content
               img(src="./images/quotes.svg", alt="")
             .index__greeting-quotes.index__greeting-quotes-rot
               img(src="./images/quotes.svg", alt="")
-            +slider-btn('greeting__prev', 'greeting__next','slider-button-conteiner--absolute')
+            +slider-btn('greeting__prev', 'greeting__next','slider-button-conteiner--absolute grear-btn')
           .swiper-slide.index__greeting-slide
             .index__greeting-man
               img(src="./images/man-great.png", alt="")
@@ -108,7 +109,7 @@ block content
               img(src="./images/quotes.svg", alt="")
             .index__greeting-quotes.index__greeting-quotes-rot
               img(src="./images/quotes.svg", alt="")
-            +slider-btn('greeting__prev', 'greeting__next','slider-button-conteiner--absolute')
+            +slider-btn('greeting__prev', 'greeting__next','slider-button-conteiner--absolute grear-btn')
           .swiper-slide.index__greeting-slide
             .index__greeting-man
               img(src="./images/man-great.png", alt="")
@@ -121,7 +122,7 @@ block content
               img(src="./images/quotes.svg", alt="")
             .index__greeting-quotes.index__greeting-quotes-rot
               img(src="./images/quotes.svg", alt="")
-            +slider-btn('greeting__prev', 'greeting__next','slider-button-conteiner--absolute')
+            +slider-btn('greeting__prev', 'greeting__next','slider-button-conteiner--absolute grear-btn')
           .swiper-slide.index__greeting-slide
             .index__greeting-man
               img(src="./images/man-great.png", alt="")
@@ -134,7 +135,7 @@ block content
               img(src="./images/quotes.svg", alt="")
             .index__greeting-quotes.index__greeting-quotes-rot
               img(src="./images/quotes.svg", alt="")
-            +slider-btn('greeting__prev', 'greeting__next','slider-button-conteiner--absolute')
+            +slider-btn('greeting__prev', 'greeting__next','slider-button-conteiner--absolute grear-btn')
         
   .index__opening
     .content

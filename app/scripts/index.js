@@ -18,7 +18,7 @@ $(document).ready(function() {
   close();
   indexTooltip();
   infoScroll();
-  greetingSlider();
+  greetingInit()
   initSlider();
   youtube();
   modal();
@@ -254,6 +254,18 @@ function greetingSlider() {
   });
 }
 
+function greetingInit() {
+  let count = 0;
+  $('.index__greeting-wrap').find('.swiper-slide').each(function(){
+    count = count + 1;
+  });
+  if (count <= 1){
+    $('.grear-btn').css('display', 'none');
+  }else{
+    greetingSlider();
+  }
+}
+
 function modal() {
   $('.js--modal').on('click', function(){
     let data = $(this).data('name');
@@ -383,4 +395,8 @@ function indSlider() {
       swiper: indThumbs
     },
   });
+}
+
+function eye() {
+  
 }

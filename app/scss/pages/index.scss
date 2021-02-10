@@ -182,8 +182,13 @@
         }
       }
 
-      span {
+      a {
         border-bottom: 1px solid #354F9A;
+        transition: all $ease-main;
+
+        &:hover {
+          color: black;
+        }
       }
       // img {
       //   margin: 0 auto;
