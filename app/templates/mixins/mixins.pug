@@ -38,7 +38,7 @@ mixin slider-btn(prev, next, mod)
         path(fill-rule="evenodd" clip-rule="evenodd" d="M0.271976 12.3962L0.271977 14.7234H25.352L16.4547 26.7473H19.1665C20.0778 26.7473 20.9375 26.3131 21.4934 25.572L22.2359 24.5824L22.3124 24.6147L30.5052 13.5609L30.5049 13.5605L30.5052 13.56L22.3124 2.50623L22.2359 2.53854L21.4934 1.54891C20.9375 0.807844 20.0778 0.373657 19.1665 0.373657L16.4547 0.373657L25.3511 12.3962H0.271976Z" fill="#21262C")
 
 mixin save-item(text, link)
-  a(href=link).doc__list-save--item
+  a(href=link).doc__list-save--item(data-aos='fade-up')
     .doc__list-save--lft
       .text.text--inter16-12=text
     .doc__list-save--rgt
