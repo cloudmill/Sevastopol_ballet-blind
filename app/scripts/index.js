@@ -19,11 +19,11 @@ $(document).ready(function() {
   indexTooltip();
   infoScroll();
   greetingSlider();
-  galSlider();
+  initSlider();
   youtube();
   modal();
-  indSlider();
-  perSlider();
+  // indSlider();
+  // perSlider();
 });
 
 function inAos() {
@@ -261,9 +261,6 @@ function modal() {
       if ( $(this).data('name') == data){
         $(this).addClass('modal--active');
       }
-      console.log($(this).data('name'));
-      console.log(data);
-      console.log($('.modal'));
     });
   });
 
@@ -292,17 +289,42 @@ function youtube() {
   });
 }
 
+function initSlider() {
+
+  $('.js--modal').on('click', function(){
+    let data = $('.js--modal').data('name');
+
+    switch(data){
+      case 'gallery-gal':
+        galSlider()
+        break;
+          
+      case 'index-gal':
+        indSlider();
+        break;
+
+      case 'performance-gal':
+        perSlider();
+        break;
+    }
+  });
+  
+}
+
 function galSlider() {
   var galThumbs = new Swiper('.gal-bottom', {
     spaceBetween: 10,
+    observer: true,
+    observeParents: true,
     slidesPerView: 'auto',
     
   });
   
-
   var galSlide = new Swiper('.gal-top', {
     slidesPerView: 'auto',
     centerSlides: true,
+    observer: true,
+    observeParents: true,
     spaceBetween: 50,
     navigation: {
       nextEl: '.gal-next',
@@ -313,9 +335,12 @@ function galSlider() {
     },
   });
 }
+
 function perSlider() {
   var perThumbs = new Swiper('.per-bottom', {
     spaceBetween: 10,
+    observer: true,
+    observeParents: true,
     slidesPerView: 'auto',
     
   });
@@ -324,6 +349,8 @@ function perSlider() {
     slidesPerView: 'auto',
     centerSlides: true,
     spaceBetween: 50,
+    observer: true,
+    observeParents: true,
     navigation: {
       nextEl: '.per-next',
       prevEl: '.per-perv',
@@ -336,6 +363,8 @@ function perSlider() {
 function indSlider() {
   var indThumbs = new Swiper('.ind-bottom', {
     spaceBetween: 10,
+    observer: true,
+    observeParents: true,
     slidesPerView: 'auto',
     
   });
@@ -344,6 +373,8 @@ function indSlider() {
     slidesPerView: 'auto',
     centerSlides: true,
     spaceBetween: 50,
+    observer: true,
+    observeParents: true,
     navigation: {
       nextEl: '.ind-next',
       prevEl: '.ind-prev',
