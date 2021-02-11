@@ -22,6 +22,7 @@ $(document).ready(function() {
   initSlider();
   youtube();
   modal();
+  eye();
   // indSlider();
   // perSlider();
 });
@@ -398,5 +399,26 @@ function indSlider() {
 }
 
 function eye() {
+
+  $('.btn-mob').on('click', function(){
+    $('#specialButton').triggerHandler('click');
+  });
+
+
+  // let cloneMob = $('.btn-mob').clone();
+  // let cloneNmob = $('.btn-nmob').clone();
+
+  // $('.btn-mob').remove();
+  // $('.btn-nmob').remove();
+
   
+  // if ($(window).width() >= '1150'){
+  //   $('.nmob').append(cloneNmob);
+  // }else{
+  //   $('.mob').append(cloneMob);
+  // }
+
+    // if ($(this).attr('id') !== 'specialButton'){
+    //   $(this).attr('id', 'specialButton');
+    // }
 }

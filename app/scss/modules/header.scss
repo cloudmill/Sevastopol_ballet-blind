@@ -62,12 +62,25 @@
       }
     }
   }
+  
 
   &__item {
     display: inline-flex;
-    @media (max-width: 1150px){
+
+    .btn-mob {
       display: none;
     }
+    
+    @media (max-width: 1150px){
+      display: none;
+      .btn-mob {
+        display: block;
+      }
+      .btn-nmob {
+        display: none;
+      }
+    }
+    
   }
 
   &__eye {
