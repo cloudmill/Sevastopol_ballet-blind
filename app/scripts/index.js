@@ -23,6 +23,7 @@ $(document).ready(function() {
   youtube();
   modal();
   eye();
+  configGallery();
   // indSlider();
   // perSlider();
 });
@@ -270,11 +271,12 @@ function greetingInit() {
 function modal() {
   $('.js--modal').on('click', function(){
     let data = $(this).data('name');
-    $('.modal').each(function(){
-      if ( $(this).data('name') == data){
-        $(this).addClass('modal--active');
-      }
-    });
+    // $('.modal').each(function(){
+    //   if ( $(this).data('name') == data){
+    //     $(this).addClass('modal--active');
+    //   }
+    // });
+    $('.modal').addClass('modal--active');
   });
 
   $('.modal__wrapper-close').on('click', function(){
@@ -421,4 +423,21 @@ function eye() {
     // if ($(this).attr('id') !== 'specialButton'){
     //   $(this).attr('id', 'specialButton');
     // }
+}
+
+function configGallery() {
+
+  $('.js--modal').on('click', function(){
+    let way = $(this).data('way');
+    let description = $(this).data('description');
+
+    let arrayWays = way.split(';');
+    console.log(arrayWays.length);
+
+    for (let i = 0; i < arrayWays.length; i++){
+      $('.modal').find('.top').append(`<div class="swiper-slide gallery-top-slide"> <img src="./images/${arrayWays[i]}"/> <p class="text text--regal24-14">${description}</p> </div>`);
+      $('.modal').find('.bottom').append(`<div class="swiper-slide"> <div class="find"></div> <img src="./images/${arrayWays[i]}"/> </div>`);
+    }
+  });
+
 }
