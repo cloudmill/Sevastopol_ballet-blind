@@ -19,11 +19,12 @@ $(document).ready(function() {
   indexTooltip();
   infoScroll();
   greetingInit()
-  initSlider();
+  // initSlider();
   youtube();
   modal();
   eye();
   configGallery();
+  galSlider();
   // indSlider();
   // perSlider();
 });
@@ -304,27 +305,27 @@ function youtube() {
   });
 }
 
-function initSlider() {
+// function initSlider() {
 
-  $('.js--modal').on('click', function(){
-    let data = $('.js--modal').data('name');
+//   $('.js--modal').on('click', function(){
+//     let data = $('.js--modal').data('name');
 
-    switch(data){
-      case 'gallery-gal':
-        galSlider()
-        break;
+//     switch(data){
+//       case 'gallery-gal':
+//         galSlider()
+//         break;
           
-      case 'index-gal':
-        indSlider();
-        break;
+//       case 'index-gal':
+//         indSlider();
+//         break;
 
-      case 'performance-gal':
-        perSlider();
-        break;
-    }
-  });
+//       case 'performance-gal':
+//         perSlider();
+//         break;
+//     }
+//   });
   
-}
+// }
 
 function galSlider() {
   var galThumbs = new Swiper('.gal-bottom', {
@@ -351,54 +352,54 @@ function galSlider() {
   });
 }
 
-function perSlider() {
-  var perThumbs = new Swiper('.per-bottom', {
-    spaceBetween: 10,
-    observer: true,
-    observeParents: true,
-    slidesPerView: 'auto',
+// function perSlider() {
+//   var perThumbs = new Swiper('.per-bottom', {
+//     spaceBetween: 10,
+//     observer: true,
+//     observeParents: true,
+//     slidesPerView: 'auto',
     
-  });
+//   });
   
-  var perSlide = new Swiper('.per-top', {
-    slidesPerView: 'auto',
-    centerSlides: true,
-    spaceBetween: 50,
-    observer: true,
-    observeParents: true,
-    navigation: {
-      nextEl: '.per-next',
-      prevEl: '.per-perv',
-    },
-    thumbs: {
-      swiper: perThumbs
-    },
-  });
-}
-function indSlider() {
-  var indThumbs = new Swiper('.ind-bottom', {
-    spaceBetween: 10,
-    observer: true,
-    observeParents: true,
-    slidesPerView: 'auto',
+//   var perSlide = new Swiper('.per-top', {
+//     slidesPerView: 'auto',
+//     centerSlides: true,
+//     spaceBetween: 50,
+//     observer: true,
+//     observeParents: true,
+//     navigation: {
+//       nextEl: '.per-next',
+//       prevEl: '.per-perv',
+//     },
+//     thumbs: {
+//       swiper: perThumbs
+//     },
+//   });
+// }
+// function indSlider() {
+//   var indThumbs = new Swiper('.ind-bottom', {
+//     spaceBetween: 10,
+//     observer: true,
+//     observeParents: true,
+//     slidesPerView: 'auto',
     
-  });
+//   });
   
-  var indSlide = new Swiper('.ind-top', {
-    slidesPerView: 'auto',
-    centerSlides: true,
-    spaceBetween: 50,
-    observer: true,
-    observeParents: true,
-    navigation: {
-      nextEl: '.ind-next',
-      prevEl: '.ind-prev',
-    },
-    thumbs: {
-      swiper: indThumbs
-    },
-  });
-}
+//   var indSlide = new Swiper('.ind-top', {
+//     slidesPerView: 'auto',
+//     centerSlides: true,
+//     spaceBetween: 50,
+//     observer: true,
+//     observeParents: true,
+//     navigation: {
+//       nextEl: '.ind-next',
+//       prevEl: '.ind-prev',
+//     },
+//     thumbs: {
+//       swiper: indThumbs
+//     },
+//   });
+// }
 
 function eye() {
 
