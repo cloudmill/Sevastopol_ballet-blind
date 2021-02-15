@@ -440,8 +440,8 @@ function configGallery() {
     }
 
     for (let i = 0; i < arrayWays.length; i++){
-      $('.modal').find('.top').append(`<div class="swiper-slide gallery-top-slide"> <img src="./images/${arrayWays[i]}"/> <p class="text text--regal24-14">${description}</p> </div>`);
-      $('.modal').find('.bottom').append(`<div class="swiper-slide"> <div class="find"></div> <img src="./images/${arrayWays[i]}"/> </div>`);
+      $('.modal').find('.top').append(`<div class="swiper-slide gallery-top-slide"> <img src="${arrayWays[i]}"/> <p class="text text--regal24-14">${description}</p> </div>`);
+      $('.modal').find('.bottom').append(`<div class="swiper-slide"> <div class="find"></div> <img src="${arrayWays[i]}"/> </div>`);
     }
   });
 
