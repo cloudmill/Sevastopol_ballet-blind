@@ -433,7 +433,11 @@ function configGallery() {
     let description = $(this).data('description');
 
     let arrayWays = way.split(';');
-    console.log(arrayWays.length);
+    
+    if ($('.top').has('.swiper-slide') || $('.bottom').has('.swiper-slide')){
+      $('.top').empty();
+      $('.bottom').empty();
+    }
 
     for (let i = 0; i < arrayWays.length; i++){
       $('.modal').find('.top').append(`<div class="swiper-slide gallery-top-slide"> <img src="./images/${arrayWays[i]}"/> <p class="text text--regal24-14">${description}</p> </div>`);
