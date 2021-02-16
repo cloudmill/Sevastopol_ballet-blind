@@ -307,7 +307,7 @@
           transform: translateY(0) scale(1);
         }
         50% {
-          transform: translateY(-50px) scale(1.5);
+          transform: translateY(-15px) scale(1.15);
         }
         0% {
           transform: translateY(0) scale(1);
@@ -1100,4 +1100,7 @@
     position: fixed;
     top: 0;
   }
+}
+.swiper-slide {
+  cursor: pointer;
 }

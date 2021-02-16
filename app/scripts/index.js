@@ -403,8 +403,13 @@ function galSlider() {
 
 function eye() {
 
-  $('.btn-mob').on('click', function(){
-    $('#specialButton').triggerHandler('click');
+  $('.specialButton').on('click', function(){
+    console.log('1');
+    $('#specialButton').click();
+  });
+
+  $('#specialButton').on('click', function(){
+    console.log('2');
   });
 
 
