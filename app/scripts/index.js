@@ -66,7 +66,10 @@ function parallax() {
     let scroll = $(this).scrollTop();
 
     $('.parallax').css({
-      'transform': 'translate(0%, ' +  - scroll / 4 + '%)'
+      'transform': 'translate(0%, ' +  - scroll / 5 + '%)'
+    });
+    $('.index__start-phone').css({
+      'transform': 'translate(-50%, ' + ( -50 + scroll / 80) + '%)'
     });
   });
 }
@@ -161,6 +164,7 @@ function indexSlider() {
   var indexSlide = new Swiper('.index__slider-conteiner', {
     slidesPerView: 'auto',
     centerSlides: true,
+    effect: 'fade',
     pagination: {
       el: '.index__slider-pagination',
       type: 'fraction',

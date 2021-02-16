@@ -4,8 +4,10 @@
     position: relative;
     height: 900px;
     padding: 190px 60px 50px;
-    background-image: url('../images/start-fon.png');
+    // background-image: url('../images/start-fon.png');
     background-position: center;
+    z-index: 1;
+    overflow: hidden;
     @media (max-width:1280px) {
       height: 800px;
       padding: 190px 40px 70px;
@@ -23,10 +25,20 @@
       padding-top: 123px;
     }
 
+    &-phone {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+    }
+
     &-title {
       font-size: 100px;
       line-height: 1;
       color: white;
+      z-index: 1;
+      position: relative;
       @media (max-width:1280px) {
         font-size: 80px;
       }
@@ -42,6 +54,7 @@
       left: 60px;
       bottom: 120px;
       cursor: pointer;
+      z-index: 1;
       @media (max-width:1280px) {
         bottom: 140px;
       }
@@ -53,12 +66,14 @@
       position: absolute;
       bottom: -20px;
       right: 50%;
+      z-index: 1;
       transform: translate(50%);
     }
   }
 
   &__info {
     padding: 130px 0 70px;
+    background: #F6F4EC;
     @media (max-width:1360px) {
       padding-top: 80px;
     }
@@ -89,6 +104,7 @@
     }
     &-slide {
       border-radius: 10px;
+      overflow: hidden;
       // max-width: 1155px;
       // max-height: 560px;
       
@@ -171,7 +187,7 @@
       }
 
       .text {
-        margin-top: 40px;
+        // margin-top: 40px;
         @media (max-width: 1100px){
           margin: 0;
           max-width: 300px;
@@ -237,7 +253,7 @@
       top: 0;
       left: 0;
       right: 0;
-      bottom: 0;
+      bottom: 3px;
       opacity: 0;
       border-radius: 10px;
       transition: all $ease-main;
@@ -286,7 +302,7 @@
     &-wrap {
       position: relative;
       border-radius: 10px;
-      background-image: url('../images/index-video.png');
+      // background-image: url('../images/index-video.png');
       color: white;
     }
 
@@ -384,8 +400,8 @@
       }
 
       .slider-button-conteiner--absolute {
-        bottom: 80px;
-        left: 30%;
+        bottom: 95px;
+        left: 30.8%;
         @media (max-width: 1545px){
           left: 35%;
         }
@@ -426,6 +442,9 @@
       .title {
         margin-bottom: 30px;
       }
+      .text {
+        color: #5C77A6
+      }
     }
     &-man {
       border-radius: 5px;
@@ -444,7 +463,7 @@
     &-quotes {
       position: absolute;
       top: 80px;
-      left: 35%;
+      left: 31%;
       @media (max-width: 1352px){
         left: 45%;
       }
@@ -498,6 +517,7 @@
 
     .sup {
       position: relative;
+      cursor: pointer;
     }
 
     .tooltip {
@@ -505,19 +525,22 @@
       min-width: 274px;
       bottom: 30px;
       right: 50%;
-      transform: translateX(50%);
+      transform: translateX(50%) translateY(200%);
       background-image: url('../images/index-tool.svg');
       background-repeat: no-repeat;
       background-size: cover;
       padding: 20px 40px 40px;
       transition: all $ease-main;
       z-index: 1;
-      margin-bottom: 100px;
+      // transform: translateY(100%);
       opacity: 0;
+      height: 0;
+      z-index: -1;
 
       &--active { 
-        margin-bottom: 0;
+        transform: translateX(50%) translateY(0);
         opacity: 1;
+        height: auto;
       }
       
 
@@ -597,12 +620,16 @@
     .row--sb-center {
       min-width: 260px;
       position: absolute;
-      bottom: -20px;
+      bottom: 0;
       left: 0;
+      align-items: flex-end;
       @media (max-width: 1150px) {
         width: 100%;
         max-width: 100%;
       }
+    }
+    .text--regal16-14-ital {
+      font-weight: 700;
     }
 
     &-slider{
@@ -627,6 +654,7 @@
     &-slide {
       background: #A5B5D2;
       border-radius: 10px;
+      overflow: hidden;
 
       img {
         width: 100%;
@@ -784,7 +812,7 @@
       }
     }
     .prev-n {
-      opacity: 1;
+      // opacity: 1;
       transition: all $ease-main;
       @media (max-width: 990px){
         display: none;
@@ -840,6 +868,7 @@
         }
       }
       .prev-n {
+        opacity: 0;
         @media (max-width: 1165px){
           opacity: 1;
         }
@@ -889,6 +918,7 @@
       .col {
         margin-left: 60px;
       }
+      
     }
   }
 
@@ -1024,6 +1054,9 @@
           color: $lilac;
         }
       }
+      .text--lilac {
+        color: #5C77A6;
+      }
     }
 
     &-link {
@@ -1038,7 +1071,7 @@
     &-date {
       font-size: 18px;
       line-height: 160%;
-      color: #B5C3DC;
+      color: #5C77A6;
       margin-bottom: 40px;
       @media (max-width: 1050px) {
         font-size: 16px;
