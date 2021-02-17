@@ -34,7 +34,7 @@
 
 
   &-white{
-    position: fixed;
+    position: absolute;
     max-height: 160px;
     // height: 100%;
     background-color: transparent;
@@ -109,6 +109,9 @@
     right: 50%;
     top: 50%;
     transform: translate(50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     // transition: all $ease-main;
     @media (max-width: 1150px){
       width: 200px;

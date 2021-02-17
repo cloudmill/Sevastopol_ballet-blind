@@ -1,7 +1,7 @@
 .contact {
 
   &__wrapp {
-    padding-top: 270px;
+    padding-top: 241px;
     @media (max-width:1360px) {
       padding-top: 180px;
     }
@@ -25,7 +25,7 @@
     }
 
     &-conteiner {
-      padding: 40px 60px 40px 37px;
+      padding: 40px 60px 15px 37px;
       border-radius: 10px;
       width: calc((100% - 60px) / 2);
       min-width: 351px;
@@ -57,7 +57,7 @@
     &-item {
 
       .text--defolt {
-        margin-top: 10px;
+        margin-top: 6px;
       }
       .row--aln-c {
         margin-top: 7px;
@@ -75,7 +75,7 @@
     }
 
     &-item--mrg {
-      margin: 15px 0 34px;
+      margin: 6px 0 34px;
       padding: 33px 0;
       border-bottom: 1px solid #D3CBA8;
       border-top: 1px solid #D3CBA8;
@@ -85,8 +85,25 @@
       }
     }
 
+    .int-mrg {
+      margin-bottom: 10px;
+    }
+
     &-tooltip {
       // margin-right: 10px;
+      margin-top: 8px;
+    }
+    &-tooltipp {
+      // margin-right: 10px;
+      margin-top: -4px;
+    }
+    &-tooltippp {
+      // margin-right: 10px;
+      margin-top: 10px;
+    }
+    &-tooltipppp {
+      // margin-right: 10px;
+      margin-top: 18px;
     }
   }
 }

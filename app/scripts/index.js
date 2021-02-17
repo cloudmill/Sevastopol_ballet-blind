@@ -125,7 +125,7 @@ function infoScroll() {
 function headerScroll() {
 
   var 
-      header = $('header'),
+      header = $('.header'),
       prevScroll = 0,
       total = 0;
   $(window).on('scroll', function(){
@@ -164,7 +164,13 @@ function indexSlider() {
   var indexSlide = new Swiper('.index__slider-conteiner', {
     slidesPerView: 'auto',
     centerSlides: true,
-    effect: 'fade',
+    // effect: 'fade',
+    // slidesPerColumn: 1,
+    grabCursor: true,
+    loop: true,
+		speed: 1000,
+		loopAdditionalSlides: 10,
+    watchSlidesProgress: true,
     pagination: {
       el: '.index__slider-pagination',
       type: 'fraction',
@@ -173,6 +179,39 @@ function indexSlider() {
       nextEl: '.index__next',
       prevEl: '.index__prev',
     },
+    on: {
+			init: function () {
+			},
+			imagesReady: function () {
+			},
+			progress: function () {
+				const swiper = this;
+				for (let i = 0; i < swiper.slides.length; i++) {
+					console.log(swiper.slides[i].progress);
+					const slideProgress = swiper.slides[i].progress;
+					const innerOffset = swiper.width * 0.5;
+					const innerTranslate = slideProgress * innerOffset;
+					console.log(innerTranslate);
+
+					swiper.slides[i].querySelector('.slide-bgimg').style.transform =
+						'translateX(' + innerTranslate + 'px)';
+				}
+			},
+			touchStart: function () {
+				const swiper = this;
+				for (let i = 0; i < swiper.slides.length; i++) {
+					swiper.slides[i].style.transition = '';
+				}
+			},
+			setTransition: function () {
+				const swiper = this;
+				for (let i = 0; i < swiper.slides.length; i++) {
+					swiper.slides[i].style.transition = 1000 + 'ms';
+					swiper.slides[i].querySelector('.slide-bgimg').style.transition =
+						1000 + 'ms';
+				}
+			}
+		}
   });
 }
 
@@ -345,7 +384,7 @@ function galSlider() {
     centerSlides: true,
     observer: true,
     observeParents: true,
-    spaceBetween: 50,
+    // spaceBetween: 50,
     navigation: {
       nextEl: '.gal-next',
       prevEl: '.gal-prev',
@@ -449,8 +488,8 @@ function configGallery() {
     }
 
     for (let i = 0; i < arrayWays.length; i++){
-      $('.modal').find('.top').append(`<div class="swiper-slide gallery-top-slide"> <img src="${arrayWays[i]}"/> <p class="text text--regal24-14">${description}</p> </div>`);
-      $('.modal').find('.bottom').append(`<div class="swiper-slide"> <div class="find"></div> <img src="${arrayWays[i]}"/> </div>`);
+      $('.modal').find('.top').append(`<div class="swiper-slide gallery-top-slide"> <div class="img-contein"> <img src="./images/${arrayWays[i]}"/> </div> <p class="text text--regal24-14">${description}</p> </div>`);
+      $('.modal').find('.bottom').append(`<div class="swiper-slide"> <div class="find"></div> <img src="./images/${arrayWays[i]}"/> </div>`);
     }
   });
 

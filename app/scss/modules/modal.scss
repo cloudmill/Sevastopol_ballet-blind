@@ -74,6 +74,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    box-shadow: none;
   }
   .slider-button-next {
     right: 60px;
@@ -236,12 +237,29 @@
         max-width: 280px;
       }
 
+      .img-contein {
+        position: relative;
+        max-width: 1155px;
+        height: 100%;
+        width: 100%;
+        max-height: 570px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
 
       img {
-        margin-bottom: 20px;
+        // margin-bottom: 20px;
         width: 100%;
-        max-width: 1155px;
-        max-height: 570px;
+        // position: absolute;
+        // top: 50%;
+        // right: 50%;
+        // transform: translate(-50%, -50%);
+        // max-width: 1155px;
+        // max-height: 570px;
         @media (max-width: 1450px){
           max-width: 850px;
         }

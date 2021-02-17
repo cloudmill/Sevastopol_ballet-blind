@@ -1,7 +1,7 @@
 .gallery {
 
   &__wrap{
-    padding-top: 252px;
+    padding-top: 242px;
     @media (max-width:1360px) {
       padding-top: 180px;
     }
@@ -26,6 +26,9 @@
         }
         & :nth-of-type(4n) {
           margin-right: 0;
+        }
+        & :nth-of-type(4n - 2) {
+          margin-right: 40px;
         }
       }
       @media (max-width: 1024px){
@@ -94,26 +97,30 @@
 
       .col {
         .text--inter20-16 {
-          margin: 14px 0 5px;
+          margin: 10px 0 5px;
         }
       }
 
       &--first {
         max-width: 1070px;
         max-height: 516px;
-        width: calc(100% - ((100% - 180px) / 4) - 60px);
+        width: calc(100% - ((100% - 180px) / 4) - 142px);
+        margin-right: 142px;
         @media (max-width: 1450px) {
-          width: calc(100% - ((100% - 120px) / 4) - 60px);
+          width: calc(100% - ((100% - 120px) / 4) - 142px);
         }
         @media (max-width: 1280px) {
           width: calc((100% - 120px) / 4);
+          margin-right: 40px;
         }
         
         @media (max-width: 1024px) {
           width: calc((100% - 20px) / 2);
+          margin-right: 20px;
         }
         @media (max-width: 450px) {
           width: 100%;
+          margin-right: 0;
         }
 
         .col-fil {
