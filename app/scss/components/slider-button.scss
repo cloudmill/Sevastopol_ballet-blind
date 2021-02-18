@@ -72,6 +72,23 @@
     //   background-image: url("data:image/svg+xml,%3Csvg width='35' height='31' viewBox='0 0 35 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.305969 14.1955L0.305969 16.8136H28.521L18.5115 30.3405H21.5624C22.5876 30.3405 23.5547 29.852 24.1801 29.0183L25.0153 27.905L25.1014 27.9413L34.3183 15.5058L34.318 15.5053L34.3183 15.5048L25.1014 3.06931L25.0153 3.10566L24.1801 1.99233C23.5547 1.15863 22.5876 0.670166 21.5624 0.670166L18.5115 0.670166L28.52 14.1955H0.305969Z' fill='white'/%3E%3C/svg%3E");
     // }
   }
+  @media (max-width: 768px){
+    &:hover {
+      width: 40px;
+      height: 40px;
+      background: white;
+      box-shadow: none;
+  
+      svg {
+        width: 16px;
+        height: 14px;
+      }
+  
+      path {
+        fill: black;
+      }
+    }
+  }
 }
 // .slider-button-next {
 //   transform: rotate(180deg);

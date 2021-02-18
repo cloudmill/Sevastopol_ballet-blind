@@ -104,11 +104,15 @@ close = function(){
 
 function indexTooltip(){
 
-  $('.sup-img').on('mouseenter', function(){
-      $('.tooltip').addClass('tooltip--active');
-  });
-  $('.sup-img').on('mouseleave', function(){
-    $('.tooltip').removeClass('tooltip--active');
+  // $('.sup-img').on('mouseenter', function(){
+  //     $('.tooltip').addClass('tooltip--active');
+  // });
+  // $('.sup-img').on('mouseleave', function(){
+  //   $('.tooltip').removeClass('tooltip--active');
+  // });
+
+  $('.sup-img').on('click', function(){
+    $('.tooltip').toggleClass('tooltip--active');
   });
 }
 
@@ -125,7 +129,7 @@ function infoScroll() {
 function headerScroll() {
 
   var 
-      header = $('.header'),
+      header = $('header'),
       prevScroll = 0,
       total = 0;
   $(window).on('scroll', function(){

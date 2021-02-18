@@ -72,6 +72,22 @@
       animation: befo .5s 0s ease 1;
     }
   }
+  @media (max-width: 768px){
+    &:hover {
+      background: #5C77A6;
+      box-shadow: none;
+      
+      .text {
+        // color: transparent;
+        animation: none;
+      }
+  
+      &::before {
+        // transform: rotate(0);
+        animation: none;
+      }
+    }
+  }
 
   &--wd-180 {
     width: 180px;

@@ -13,6 +13,7 @@ block content
         .search-close
         input(type='text', placeholder='Поиск', name='s').search-input
         +lilac-btn-180('Поиск')
+        .search-close.search-close--mobile
 
   header.header-white
     .burger-menu
@@ -36,7 +37,7 @@ block content
           span
           span
           span
-        .header__search-mobile
+        .header__search-mobile.header__search
           img(src="./images/header/search.svg", alt="поиск")
         .row.row--sb-center.row--hg--80.row--none
           .header__item.header__search
@@ -84,7 +85,7 @@ block content
             br
             | федеральных культурно–образовательных
             br
-            | комплексов,призванных
+            | комплексов, призванных
             span.text.text--regal16-14-ital  создать единое
               br
               | культурное пространство на территории
