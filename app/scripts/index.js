@@ -1,13 +1,14 @@
 import $, { event } from "jquery";
 import App from "./main.js";
 import Swiper from 'swiper';
-import AOS from 'aos';
+// import AOS from 'aos';
 
 $(document).ready(function() {
   let app = new App();
-  inAos();
+  // inAos();
+  noAnim();
   burger();
-  parallax();
+  // parallax();
   indexSlider();
   institSlider();
   gallery();
@@ -61,18 +62,18 @@ function burger() {
   });
 }
 
-function parallax() {
-  $(window).on('scroll', function(){
-    let scroll = $(this).scrollTop();
+// function parallax() {
+//   $(window).on('scroll', function(){
+//     let scroll = $(this).scrollTop();
 
-    $('.parallax').css({
-      'transform': 'translate(0%, ' +  - scroll / 5 + '%)'
-    });
-    $('.index__start-phone').css({
-      'transform': 'translate(-50%, ' + ( -50 + scroll / 80) + '%)'
-    });
-  });
-}
+//     $('.parallax').css({
+//       'transform': 'translate(0%, ' +  - scroll / 5 + '%)'
+//     });
+//     $('.index__start-phone').css({
+//       'transform': 'translate(-50%, ' + ( -50 + scroll / 80) + '%)'
+//     });
+//   });
+// }
 
 function search(){
   let searchOn = $('.header__search');
@@ -85,6 +86,10 @@ function search(){
   searchOff.on('click', function(){
     searchBl.removeClass('search--active');
   });
+}
+
+function noAnim() {
+  $('[data-aos=fade-up]').css('opacity', 1);
 }
 
 close = function(){
